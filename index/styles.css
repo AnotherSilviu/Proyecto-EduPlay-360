@@ -1,0 +1,144 @@
+:root {
+    --color-pink: #f764a4;
+    --color-purple: #7f56d9;
+    --color-blue: #4c9aff;
+    --color-green: #00c896;
+    --bg-light: #f9f9fb;
+    --text-dark: #2e2e2e;
+    --font-main: 'Raleway', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: var(--color-purple);
+  }
+  
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
+    color: white;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 1rem;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-text button {
+    background-color: var(--color-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .hero-text button:hover {
+    background-color: var(--color-pink);
+  }
+  
+  .hero-img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 1rem;
+    animation: fadeInUp 1s ease 0.3s forwards;
+  }
+  
+  .hero-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .info {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .info h2 {
+    font-size: 2rem;
+    color: var(--color-purple);
+    margin-bottom: 1rem;
+  }
+  
+  .info p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
