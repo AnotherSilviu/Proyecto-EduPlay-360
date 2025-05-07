@@ -1,27 +1,26 @@
 :root {
     --color-pink: #f764a4;
-    --color-purple: #281dca;
+    --color-purple: #7f56d9;
     --color-blue: #4c9aff;
     --color-green: #00c896;
     --bg-light: #f9f9fb;
     --text-dark: #2e2e2e;
     --font-main: 'Montserrat', sans-serif;
-
   }
-  
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: var(--font-main);
     background-color: var(--bg-light);
     color: var(--text-dark);
     overflow-x: hidden;
   }
-  
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -30,7 +29,7 @@
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
-  
+
   .logo {
     display: flex;
   }
@@ -39,12 +38,13 @@
     height: 40px;
     margin-right: 10px;
   }
+
   .logo p {
     font-size: 15px;
     font-weight: 500px;
     margin-top: 13px;
   }
-  
+
   .nav a {
     margin-left: 1.5rem;
     text-decoration: none;
@@ -52,14 +52,14 @@
     font-weight: 600;
     transition: color 0.3s;
   }
-  
+
   .nav a:hover {
     color: var(--color-purple);
   }
-  
+
   .hero {
     position: relative;
-    height: 100vh;
+    height: 300px;
     background: url("imagenes/hero-vr.jpeg") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -67,33 +67,38 @@
     color: white;
     text-align: center;
   }
-  
+
   .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
     z-index: 1;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
   }
-  
+
   .hero-content {
     position: relative;
     z-index: 2;
     max-width: 700px;
     padding: 2rem;
     animation: fadeInUp 1.2s ease-in-out forwards;
+    text-align: center;
   }
-  
+
   .hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
-  
+
   .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
-  
+
   .hero-content button {
     background-color: var(--color-green);
     color: white;
@@ -104,29 +109,39 @@
     cursor: pointer;
     transition: background 0.3s ease;
   }
-  
+
   .hero-content button:hover {
     background-color: var(--color-pink);
-  }  
-  
+  }
+
   .info {
-    padding: 4rem 2rem;
+    padding: 30px;
     text-align: center;
   }
-  
+
   .info h2 {
     font-size: 2rem;
     color: var(--color-purple);
     margin-bottom: 1rem;
   }
-  
+
   .info p {
-    max-width: 700px;
-    margin: auto;
     font-size: 1.1rem;
     color: #444;
+    text-align: center;
+    margin: 0 50px 0 50px
   }
-  
+
+  .info ul {
+    padding: 20px;
+    margin: 0 60px 0 60px;
+    text-align: justify;
+  }
+
+  .info li {
+    padding: 5px
+  }
+
   .footer {
     text-align: center;
     padding: 1.5rem;
@@ -135,7 +150,7 @@
     font-size: 0.9rem;
     margin-top: 2rem;
   }
-  
+
   /* Animaciones */
   @keyframes fadeInUp {
     from {
@@ -147,4 +162,3 @@
       transform: translateY(0);
     }
   }
-  
