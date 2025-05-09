@@ -21,48 +21,99 @@
     overflow-x: hidden;
   }
   
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .logo {
-    display: flex;
-  }
+ .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
-  .logo img {
-    height: 40px;
-    margin-right: 10px;
-  }
+.logo {
+  display: flex;
+}
 
-  .logo p {
-    font-size: 15px;
-    font-weight: 600;
-    margin-top: 13px;
-    background: linear-gradient(270deg, var(--color-blue), var(--color-green), var(--color-blue));
-    background-size: 200% auto;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: textGlow 4s linear infinite;
-    white-space: nowrap;
-  }
-  
-  .nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  
-  .nav a:hover {
-    color: var(--color-blue);
-  }
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo p {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 13px;
+  background: linear-gradient(270deg, var(--color-blue), var(--color-green), var(--color-blue));
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: textGlow 4s linear infinite;
+  white-space: nowrap;
+}
+
+/* Menú de navegación */
+.nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none; /* Eliminar los marcadores de los <li> */
+}
+
+.nav li {
+  margin-left: 1.5rem; /* Espacio entre los enlaces */
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-blue);
+}
+
+/* Estilo para el contenedor del desplegable */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-content a {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--text-dark);
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-blue-shadows);
+  color: var(--color-blue);
+}
+
+/* Mostrar el desplegable cuando el mouse pasa por encima */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.3s ease-out forwards;
+}
   
   .hero {
     position: relative;
@@ -182,3 +233,14 @@
     100% { background-position: 200% center; }
   }
   
+  /* Animación para el menú desplegable */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
