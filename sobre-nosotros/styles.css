@@ -52,17 +52,68 @@
     white-space: nowrap;
   }
   
-  .nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  
-  .nav a:hover {
-    color: var(--color-blue);
-  }
+  /* Menú de navegación */
+.nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  margin-left: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-blue);
+}
+
+/* Estilo para el contenedor del desplegable */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-content a {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--text-dark);
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-blue-shadows);
+  color: var(--color-blue);
+}
+
+/* Mostrar el desplegable cuando el mouse pasa por encima */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.3s ease-out forwards;
+}
   
   .hero {
     position: relative;
@@ -272,6 +323,58 @@
     cursor: pointer;
     color: var(--color-blue-shadows);
   }
+
+  .experiencias-anteriores{
+  padding: 30px;
+  text-align: center;
+}
+
+.experiencias-anteriores h2{
+  font-size: 25;
+  color: var(--color-blue-shadows);
+  margin-bottom: 1rem;
+}
+
+.experiencias-anteriores p{
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.experiencias-anteriores ul {
+  list-style: none;
+  padding: 20px 50px 0 50px;
+}
+
+.experiencias-anteriores li{
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  border-left: 4px solid var(--color-green);
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+  hr {
+  border: none;
+  height: 3px;
+  background: var(--color-blue-shadows);
+  border-radius: 50px;
+  width: 60%;
+  margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0, 70, 170, 0.2); 
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--text-dark);
+  color: var(--bg-light);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
   
   @keyframes fadeInUp {
     from {
@@ -289,4 +392,14 @@
     100% { background-position: 200% center; }
   }
 
- 
+ /* Animación para el menú desplegable */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

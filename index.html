@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -23,16 +31,16 @@
           <li class="dropdown">
             <a href="#">Nuestra empresa</a>
             <div class="dropdown-content">
-              <a href="sobre-nosotros/index.html">Sobre nosotros</a>
-              <a href="diseño-didactico/diseno-didactico.html">Diseño Didáctico</a>
-              <a href="evaluacion/evaluacion.html">Evaluación</a>
-              <a href="objetivos/index.html">Objetivos</a>
-              <a href="planificacion/index.html">Planificación</a>
-              <a href="presupuesto/presupuesto.html">Presupuesto</a>
+              <a href="about-the-project/index.html">Sobre el proyecto</a>
+              <a href="sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="metodologia-innovadora/index.html"
+                >Metodología innovadora</a
+              >
+              <a href="tecnologia/index.html">Tecnología</a>
+              <a href="resultados-recursos/index.html">Resultados y Recursos</a>
             </div>
           </li>
-          <li><a href="sobre-nosotros/index.html">Sobre nosotros</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="contacto/index.html">Contactános</a></li>
         </ul>
       </nav>
     </header>
@@ -49,6 +57,7 @@
       </div>
     </section>
 
+    <!--Breve Descripción-->
     <section class="info" id="info">
       <h2>¿Qué es <strong>Shaping the Future</strong>?</h2>
       <p>
@@ -68,20 +77,135 @@
       </p>
     </section>
 
-    <section class="experiencias-anteriores">
-      <p>Eduplay 360 cuenta con una amplia trayectoria de proyectos que respaldan su experiencia y éxito en el ámbito de la formación empresarial:</p>
-      <ul>
-        <li>Proyecto <strong>EdTech Sprint</strong> con startups de biotecnología: formación intensiva en prototipado rápido y diseño asistido (2024).</li>
-        <li><strong>XR Business Challenge:</strong> simuladores en realidad aumentada para habilidades directivas (2023).</li>
-        <li>Consultoría para <strong>SmartFactory HUB:</strong> integración de robótica colaborativa en procesos logísticos (2022).</li>
-        <li><strong>Robolab Innovator:</strong> Laboratorio virtual de robótica para jóvenes talentos, aplicado en cuatro países (2021).</li>
-      </ul>
+    <hr />
+
+    <!--Pg 14 G.5. Actividades que se realizarán-->
+    <section class="actividades">
+      <h2>Demo de actividades | ¿Qué encontrarás en la formación?</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <div class="image-wrapper">
+                <img
+                  src="imagenes/exploracion.webp"
+                  alt="Exploracion gamificada"
+                />
+              </div>
+              <div class="text-content">
+                <h4>Exploración gamificada de Tech City.</h4>
+                <p>
+                  ¡Explora Tech City, una ciudad llena de misterior y desafíos!
+                  Esta es tu misión inicial: recorre sus distritos clave
+                  (Innovación, Sostenibilidad, Automatización) personalizando tu
+                  avatar. Interactúa con los personajes virtuales para obtener
+                  pistas, completa el mapa con puntos de interés y al finalizar
+                  obtendrás un informe con tu perfil de aprendizaje ej:
+                  <em>"Exploradora creativa"</em>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <div class="image-wrapper">
+                <img src="imagenes/resolucion.jpg" alt="resolucion de retos" />
+              </div>
+              <div class="text-content">
+                <h4>Resolución de retos por bloques.</h4>
+                <p>
+                  ¡Emergencia en Tech City! Soluciona el sobrecalentamiento del
+                  cuadro de mandos de la central eléctrica. Usa la tecnología VR
+                  para diagnosticar el fallo, modela en 3D las piezas afectadas
+                  y simula la reparación. Si reduces el consumo energético un
+                  10%, ganarás la insignia
+                  <em>"Especialista en eficiencia energética"</em>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <div class="image-wrapper">
+                <img
+                  src="imagenes/desarrollo.webp"
+                  alt="desarrollo de un proyecto"
+                />
+              </div>
+              <div class="text-content">
+                <h4>Desarrollo de un proyecto personalizado.</h4>
+                <p>
+                  Tech City requiere acción immediata. Los hospitales necesitan
+                  un dispensador de medicamentos accesible. Desarrolla un
+                  prototipo en Tinkercad que pueda ser activado por voz o
+                  festos, simula su funcionamiento con Arduino y preséntalo en
+                  la feria virtual de salud. Los tres mejores diseños escalarán
+                  posiciones en el panel de líderes de la ciudad.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <div class="image-wrapper">
+                <img
+                  src="imagenes/participacion.jpg"
+                  alt="participacion en foros"
+                />
+              </div>
+              <div class="text-content">
+                <h4>Participación en foros y tutorías.</h4>
+                <p>
+                  La cafetería de Tech City enfrenta una propuesta polémica:
+                  reemplazar el 50% del personal humano por robots baristas.
+                  Argumenta tu postura en el foro, debatiendo y fundamentando
+                  tus razones. Durante la tutoría, propón una solución
+                  innovadora que equilibre automatización y empleo. Si puedes
+                  lograr un consenso en el dilema, podrás desbloquear la
+                  insignia <em>"Mediador/a ético/a</em>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <div class="image-wrapper">
+                <img
+                  src="imagenes/reflexion.jpg"
+                  alt="reflexion y evaluación"
+                />
+              </div>
+              <div class="text-content">
+                <h4>Reflexión y evaluación final.</h4>
+                <p>
+                  Deja tu huella en Tech City. Graba un discurso de 90 segundos
+                  defendiendo la relevanciade tu proyecto para el futuro de la
+                  ciudad, completa una tabla de autoevaluación y difunde tu
+                  trabajo en redes sociales usando <em>#TechCityImpact</em> y
+                  etiquetando a tres personas clave. Tu aporte definirá tu
+                  legado y visibilidad en la comunidad
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controles del slider -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
-    
+
+    <img src="imagenes/activities.jpeg" alt="" />
+
     <footer class="footer">
-      <p>&copy; 2025 EduPlay360°. Página ficticia blablablabla.</p>
+      <p>
+        &copy; 2025 EduPlay360°. Página ficticia. <br />
+        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
+        y Raquel.
+      </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
