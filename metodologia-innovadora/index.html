@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metodología innovadora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../imagenes/logo.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+     <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <p>SHAPING THE FUTURE</p>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Nuestra empresa</a>
+            <div class="dropdown-content">
+              <a href="../about-the-project/index.html">Sobre el proyecto</a>
+              <a href="../sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="index.html">Metodología innovadora</a>
+              <a href="../tecnologia/index.html">Tecnología</a>
+              <a href="../resultados-recursos/index.html"
+                >Resultados y Recursos</a
+              >
+            </div>
+          </li>
+          <li><a href="../contacto/index.html">Contactános</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Breve Descripción-->
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>lorem lorem lorem</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          rem sequi quis maiores error magni, quaerat beatae, voluptatem
+          asperiores dolor nostrum. Repellendus numquam ab quidem inventore,
+          optio aliquid labore earum.
+        </p>
+        <button onclick="scrollToInfo()">Empezar</button>
+      </div>
+    </section>
+
+    <!---Pg.6 F.1. Modelo instruccional escogido.-->
+    <section class="modelo" id="info">
+      <h2>Modelo instruccional escogido.</h2>
+      <p>
+        <strong>Shaping the Future</strong> se desarrolla bajo el modelo
+        instruccional <strong>ADDIE</strong> (Análisis, Diseño, Desarrollo,
+        Implementación, Evaluación). La elección de este modelo frente a otros
+        (ASSURE, 4C/ID, 7Cs de Conole, prototipado rápido) viene justificada por
+        las siguientes razones:
+      </p>
+      <ul class="lista-modelo">
+        <li>
+          <strong>Duración del proyecto:</strong> se estima una duración de seis
+          meses
+        </li>
+        <li>
+          <strong>Tecnologías implicadas:</strong> principalmente se utilizará
+          una plataforma LMS para la gestión completa de la formación,
+          valiéndose de otros recursos TIC complementarios (Realidad Virtual,
+          herramientas 3D).
+        </li>
+        <li>
+          <strong>Alineación con el enfoque pedagógico:</strong> la
+          secuenciación y organización de contenidos adquiere una relevancia
+          clave en el desarrollo del proyecto para poder integrar metodologías
+          activas (ABP y ABR).
+        </li>
+        <li>
+          <strong>Rol de las alumnas y alumnos:</strong> la persona participante
+          avanza de forma autónoma y es protagonista de su propio aprendizaje.
+        </li>
+        <li>
+          <strong>Rol de la persona docente:</strong> el equipo docente diseña
+          los contenidos, planifica y estructura la formación
+        </li>
+        <li>
+          <strong>Evaluación:</strong> tendrá una parte de evaluación continua y
+          otra de evaluación final donde destaca la presencia de múltiples
+          instrumentos de evaluación.
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <!---Pg.7. F.3. Definición de las fases generales de elaboración del proyecto-->
+    <section class="fases-generales">
+      <h2>Definición de las fases generales de elaboración del proyecto.</h2>
+      <p>
+        Siguiendo el modelo instruccional escogido <strong>ADDIE</strong>, las
+        fases del proyecto serán las siguientes:
+      </p>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <h4>Fase 1. Análisis</h4>
+              <p>
+                Diagnóstico inicial de las necesidades tecnológicas específicas
+                de las startups, evaluación de competencias actuales y potencial
+                de innovación.
+              </p>
+              <button onclick="mostrarFases('Fase 1')">
+                Tareas Vinculadas
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <h4>Fase 2. Diseño</h4>
+              <p>
+                Desarrollo de planes tecnopedagógicos personalizados y
+                necesidades de cada startup.
+              </p>
+              <button onclick="mostrarFases('Fase 2')">
+                Tareas Vinculadas
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <h4>Fase 3. Desarrollo</h4>
+              <p>
+                Creación de contenidos digitales interactivos y materiales
+                educativos prácticos orientados al uso intensivo de realidad
+                virtual, robótica colaborativa e impresión 3D. Programación de
+                las actividades o retos en el entorno interactivo.
+              </p>
+              <button onclick="mostrarFases('Fase 3')">
+                Tareas Vinculadas
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <h4>Fase 4. Implementación</h4>
+              <p>
+                Desplegar la formación en un entorno virtual flexible y
+                colaborativo adaptado al ritmo y necesidades de diferentes
+                startups tecnológicas. Lanzamiento del entorno
+                <strong>Tech City</strong>, tutorías y seguimiento.
+              </p>
+              <button onclick="mostrarFases('Fase 4')">
+                Tareas Vinculadas
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <h4>Fase 5. Evaluación</h4>
+              <p>
+                Monitoreo permanente y evaluación continua de la aplicación
+                práctica de las competencias adquiridas en los proyectos de las
+                startups participantes.
+              </p>
+              <button onclick="mostrarFases('Fase 5')">
+                Tareas Vinculadas
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide fase">
+            <div class="role-box">
+              <h4>Cronograma de las fases y tareas</h4>
+              <p>En esta foto veremos las fases resumidas en un cronograma</p>
+              <button onclick="ampliarImagen('metodologia-innovadora/images/cronograma.jpeg')">
+                Ver Imagen
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Controles del slider -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <hr />
+    <!---Pg.11 G.2. Modelo pedagógico-->
+    <section class="modelo" id="info">
+      <h2>Modelo pedagógico</h2>
+      <p>
+        El diseño de <strong>Shaping the Future</strong> se basa en una
+        combinación de modelos activos, inclusivos y conectivos:
+      </p>
+      <ul class="lista-modelo">
+        <li>
+          <strong>Constructivismo (Vygotsky):</strong> aprendizaje significativo
+          basado en la interacción con retos reales.
+        </li>
+        <li>
+          <strong>Aprendizaje experiencial (Kolb):</strong> ciclos de
+          experiencia, reflexión, conceptualización y aplicación.
+        </li>
+        <li>
+          <strong>Aprendizaje adulto (Knowles):</strong> relevancia, autonomía y
+          transferencia inmediata al puesto de trabajo.
+        </li>
+        <li>
+          <strong>Conectivismo (Siemens):</strong> construcción de redes y uso
+          de recursos distribuidos.
+        </li>
+        <li>
+          <strong>Diseño Universal para el Aprendizaje (DUA - CAST):</strong>
+          accesibilidad, personalización y diversidad de opciones para aprender,
+          participar y demostrar aprendizajes.
+        </li>
+        <li>
+          <strong>Aprendizaje Basado en Proyectos (ABP) y Retos (ABR), </strong
+          >mobile learning, social learning. de evaluación.
+        </li>
+      </ul>
+      <p>
+        Todo esto se organiza según el <strong>modelo ADDIE</strong> y se
+        desarrolla en el entorno narrativo gamificado
+        <strong><em>Tech City</em></strong
+        >.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>
+        &copy; 2025 EduPlay360°. Página ficticia. <br />
+        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
+        y Raquel.
+      </p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>
