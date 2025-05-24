@@ -37,27 +37,51 @@
                 >Metodología innovadora</a
               >
               <a href="tecnologia/index.html">Tecnología</a>
-              <div class="dropdown-sub">
-                <a href="#">Resultados y Recursos</a>
-                <div class="dropdown-sub-content">
                   <a href="resultados.html">Resultados</a>
                   <a href="recursos.html">Recursos</a>
-                </div>
-              </div>
             </div>
           </li>
           <li><a href="contacto/index.html">Contactános</a></li>
         </ul>
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="mobile-overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="index.html">Inicio</a>
+
+            <!-- Nuestra empresa es dropdown -->
+
+            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+            <div class="dropdown-sub">
+              <a href="about-the-project/index.html">Sobre el proyecto</a>
+              <a href="sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="metodologia-innovadora/index.html"
+                >Metodología innovadora</a
+              >
+              <a href="tecnologia/index.html">Tecnología</a>
+                <a href="resultados.html">Resultados</a>
+                <a href="recursos.html">Recursos</a>
+
+            </div>
+
+            <a href="contacto/index.html">Contactános</a>
+          </div>
+        </div>
       </nav>
     </header>
 
     <section class="hero">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1>Explora el Futuro del Aprendizaje</h1>
+        <h1>Explora el futuro del aprendizaje</h1>
         <p>
-          Una formación virtual para startups emergentes que impulsa el uso de
-          tecnologías como realidad virtual, robótica y 3D.
+          <em>Shaping the future:</em> una formación virtual para startups
+          emergentes….
         </p>
         <button onclick="scrollToInfo()">Empezar</button>
       </div>
@@ -65,22 +89,30 @@
 
     <!--Breve Descripción-->
     <section class="info" id="info">
-      <h2>¿Qué es <strong>Shaping the Future</strong>?</h2>
-      <p>
-        Es una experiencia formativa innovadora cuyo eje vertebrador es la
-        gamificación, acompañada de metodologías activas como el Aprendizaje
-        Basado en Proyectos (ABP), Aprendizaje Basado en Retos (ABR), el Diseño
-        Universal para el Aprendizaje (DUA) y el aprendizaje móvil y social
-        (mobile & social learning). A través de un entorno inmersivo llamado
-        Tech City, los y las participantes asumirán roles activos en la
-        resolución de misiones y desafíos que simulan problemas del mundo real:
-        desde la eficiencia industrial hasta la sostenibilidad urbana. Todo ello
-        utilizando tecnologías emergentes en entornos colaborativos virtuales.
-        Además, este proyecto promueve un modelo tecnopedagógico orientado al
-        desarrollo de competencias en acción, donde la tecnología no es solo un
-        canal de contenidos, sino un medio para experimentar, colaborar y
-        construir conocimiento.
-      </p>
+      <div class="info-container">
+        <div class="info-text">
+          <h2>¿Qué es <strong>Shaping the Future</strong>?</h2>
+          <p>
+            <em>Shaping the future</em> es una experiencia formativa innovadora
+            que combina gamificación, retos reales y tecnología emergente en el
+            <strong>entorno virtual inmersivo</strong> <em>Tech City</em>. A
+            través de metodologías activas, las personas participantes
+            desarrollan las competencias clave sobre el uso de herramientas de
+            <strong>realidad virtual y diseño 3D</strong> mientras resuelven
+            desafíos sobre sostenibilidad, industria y sociedad. Se trata de un
+            proyecto donde la tecnología está al servicio del aprendizaje activo
+            y colaborativo.
+          </p>
+          <button>
+            <a href="about-the-project/index.html"
+              >¡Conoce más detalles del proyecto!</a
+            >
+          </button>
+        </div>
+        <div class="info-image">
+          <img src="imagenes/imagen-index.png" alt="imagen intro" />
+        </div>
+      </div>
     </section>
 
     <hr />
@@ -202,14 +234,35 @@
     </section>
 
     <footer class="footer">
-      <p>
-        &copy; 2025 EduPlay360°. Página ficticia. <br />
-        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
-        y Raquel.
-      </p>
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          &copy; 2025 EduPlay360°. Página ficticia. <br />
+          Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
+          Ramón y Raquel."
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN LAS REDES</u></h3>
+        <a
+          href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
+          target="_blank"
+          ><img src="../imagenes/facebook.png" alt="logo-facebook"
+        /></a>
+        <a href="https://x.com/turismoclm" target="_blank">
+          <img src="../imagenes/x.webp" alt="logo-x" />
+        </a>
+        <a
+          href="https://www.instagram.com/turismocastillalamancha/?hl=es"
+          target="_blank"
+          ><img src="../imagenes/instagram.png" alt="logo-instagram"
+        /></a>
+      </div>
     </footer>
 
     <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
