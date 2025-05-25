@@ -2,7 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="EduPlay360° - Formación gamificada en tecnologías emergentes como realidad virtual, robótica y diseño 3D. Descubre el proyecto 'Shaping the Future'."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>EduPlay360°</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="imagenes/logo.jpeg" />
@@ -14,15 +19,13 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <img src="imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <a href="index.html"
+          ><img src="imagenes/logo.jpeg" alt="EduPlay360 Logo"
+        /></a>
         <p>SHAPING THE FUTURE</p>
       </div>
       <nav class="nav">
@@ -36,26 +39,29 @@
               <a href="metodologia-innovadora/index.html"
                 >Metodología innovadora</a
               >
-              <a href="tecnologia/index.html">Tecnología</a>
-                  <a href="resultados.html">Resultados</a>
-                  <a href="recursos.html">Recursos</a>
+              <a href="tecnologia/index.html">Evaluación</a>
+              <a href="resultados-recursos/resultados.html"
+                >Resultados y Recursos</a
+              >
             </div>
           </li>
-          <li><a href="contacto/index.html">Contactános</a></li>
+          <li><a href="contacto/index.html">Contáctanos</a></li>
         </ul>
         <!--Barra de navegación dinámica-->
-        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+        <a
+          onclick="openNav()"
+          class="menu"
+          href="javascript:void(0)"
+          aria-label="Abrir menú de navegación"
           ><strong>MENÚ</strong></a
         >
+
         <div class="mobile-overlay" id="mobile-menu">
           <a onclick="closeNav()" href="javascript:void(0)" class="close"
             >&times;</a
           >
           <div class="overlay-content">
             <a href="index.html">Inicio</a>
-
-            <!-- Nuestra empresa es dropdown -->
-
             <a href="#" class="dropdown-toggle">Nuestra empresa</a>
             <div class="dropdown-sub">
               <a href="about-the-project/index.html">Sobre el proyecto</a>
@@ -63,176 +69,181 @@
               <a href="metodologia-innovadora/index.html"
                 >Metodología innovadora</a
               >
-              <a href="tecnologia/index.html">Tecnología</a>
-                <a href="resultados.html">Resultados</a>
-                <a href="recursos.html">Recursos</a>
-
+              <a href="tecnologia/index.html">Evaluación</a>
+              <a href="resultados-recursos/resultados.html"
+                >Resultados y Recursos</a
+              >
             </div>
-
-            <a href="contacto/index.html">Contactános</a>
+            <a href="contacto/index.html">Contáctanos</a>
           </div>
         </div>
       </nav>
     </header>
-
-    <section class="hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Explora el futuro del aprendizaje</h1>
-        <p>
-          <em>Shaping the future:</em> una formación virtual para startups
-          emergentes….
-        </p>
-        <button onclick="scrollToInfo()">Empezar</button>
-      </div>
-    </section>
-
-    <!--Breve Descripción-->
-    <section class="info" id="info">
-      <div class="info-container">
-        <div class="info-text">
-          <h2>¿Qué es <strong>Shaping the Future</strong>?</h2>
+    <main>
+      <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <h1>Explora el futuro del aprendizaje</h1>
           <p>
-            <em>Shaping the future</em> es una experiencia formativa innovadora
-            que combina gamificación, retos reales y tecnología emergente en el
-            <strong>entorno virtual inmersivo</strong> <em>Tech City</em>. A
-            través de metodologías activas, las personas participantes
-            desarrollan las competencias clave sobre el uso de herramientas de
-            <strong>realidad virtual y diseño 3D</strong> mientras resuelven
-            desafíos sobre sostenibilidad, industria y sociedad. Se trata de un
-            proyecto donde la tecnología está al servicio del aprendizaje activo
-            y colaborativo.
+            <em>Shaping the future:</em> una formación virtual para startups
+            emergentes que impulsa el uso de tecnologías como realidad virtual,
+            robótica y 3D.
           </p>
-          <button>
-            <a href="about-the-project/index.html"
-              >¡Conoce más detalles del proyecto!</a
-            >
-          </button>
+          <button onclick="scrollToInfo()">Empezar</button>
         </div>
-        <div class="info-image">
-          <img src="imagenes/imagen-index.png" alt="imagen intro" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <hr />
-
-    <!--Pg 14 G.5. Actividades que se realizarán-->
-    <section class="actividades">
-      <h2>Demo de actividades | ¿Qué encontrarás en la formación?</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide fase">
-            <div class="role-box">
-              <div class="image-wrapper">
-                <img
-                  src="imagenes/exploracion.webp"
-                  alt="Exploracion gamificada"
-                />
-              </div>
-              <div class="text-content">
-                <h4>Exploración gamificada de Tech City.</h4>
-                <p>
-                  ¡Explora Tech City, una ciudad llena de misterior y desafíos!
-                  Esta es tu misión inicial: recorre sus distritos clave
-                  (Innovación, Sostenibilidad, Automatización) personalizando tu
-                  avatar. Interactúa con los personajes virtuales para obtener
-                  pistas, completa el mapa con puntos de interés y al finalizar
-                  obtendrás un informe con tu perfil de aprendizaje ej:
-                  <em>"Exploradora creativa"</em>.
-                </p>
-              </div>
-            </div>
+      <!--Breve Descripción-->
+      <section class="info" id="info">
+        <div class="info-container">
+          <div class="info-text">
+            <h2>¿Qué es <strong>Shaping the Future</strong>?</h2>
+            <p>
+              <em>Shaping the future</em> es una experiencia formativa
+              innovadora que combina gamificación, retos reales y tecnología
+              emergente en el <strong>entorno virtual inmersivo</strong>
+              <em>Tech City</em>. A través de metodologías activas, las personas
+              participantes desarrollan las competencias clave sobre el uso de
+              herramientas de
+              <strong>realidad virtual y diseño 3D</strong> mientras resuelven
+              desafíos sobre sostenibilidad, industria y sociedad. Se trata de
+              un proyecto donde la tecnología está al servicio del aprendizaje
+              activo y colaborativo.
+            </p>
+            <button onclick="location.href= 'about-the-project/index.html'">
+              ¡Conoce más detalles del proyecto!
+            </button>
           </div>
-          <div class="swiper-slide fase">
-            <div class="role-box">
-              <div class="image-wrapper">
-                <img src="imagenes/resolucion.jpg" alt="resolucion de retos" />
-              </div>
-              <div class="text-content">
-                <h4>Resolución de retos por bloques.</h4>
-                <p>
-                  ¡Emergencia en Tech City! Soluciona el sobrecalentamiento del
-                  cuadro de mandos de la central eléctrica. Usa la tecnología VR
-                  para diagnosticar el fallo, modela en 3D las piezas afectadas
-                  y simula la reparación. Si reduces el consumo energético un
-                  10%, ganarás la insignia
-                  <em>"Especialista en eficiencia energética"</em>.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide fase">
-            <div class="role-box">
-              <div class="image-wrapper">
-                <img
-                  src="imagenes/desarrollo.webp"
-                  alt="desarrollo de un proyecto"
-                />
-              </div>
-              <div class="text-content">
-                <h4>Desarrollo de un proyecto personalizado.</h4>
-                <p>
-                  Tech City requiere acción immediata. Los hospitales necesitan
-                  un dispensador de medicamentos accesible. Desarrolla un
-                  prototipo en Tinkercad que pueda ser activado por voz o
-                  festos, simula su funcionamiento con Arduino y preséntalo en
-                  la feria virtual de salud. Los tres mejores diseños escalarán
-                  posiciones en el panel de líderes de la ciudad.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide fase">
-            <div class="role-box">
-              <div class="image-wrapper">
-                <img
-                  src="imagenes/participacion.jpg"
-                  alt="participacion en foros"
-                />
-              </div>
-              <div class="text-content">
-                <h4>Participación en foros y tutorías.</h4>
-                <p>
-                  La cafetería de Tech City enfrenta una propuesta polémica:
-                  reemplazar el 50% del personal humano por robots baristas.
-                  Argumenta tu postura en el foro, debatiendo y fundamentando
-                  tus razones. Durante la tutoría, propón una solución
-                  innovadora que equilibre automatización y empleo. Si puedes
-                  lograr un consenso en el dilema, podrás desbloquear la
-                  insignia <em>"Mediador/a ético/a</em>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide fase">
-            <div class="role-box">
-              <div class="image-wrapper">
-                <img
-                  src="imagenes/reflexion.jpg"
-                  alt="reflexion y evaluación"
-                />
-              </div>
-              <div class="text-content">
-                <h4>Reflexión y evaluación final.</h4>
-                <p>
-                  Deja tu huella en Tech City. Graba un discurso de 90 segundos
-                  defendiendo la relevanciade tu proyecto para el futuro de la
-                  ciudad, completa una tabla de autoevaluación y difunde tu
-                  trabajo en redes sociales usando <em>#TechCityImpact</em> y
-                  etiquetando a tres personas clave. Tu aporte definirá tu
-                  legado y visibilidad en la comunidad
-                </p>
-              </div>
-            </div>
+          <div class="info-image">
+            <img src="imagenes/imagen-index.png" alt="imagen intro" />
           </div>
         </div>
-        <!-- Controles del slider -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </section>
+      </section>
 
+      <hr />
+
+      <!--Pg 14 G.5. Actividades que se realizarán-->
+      <section class="actividades">
+        <h2>Demo de actividades | ¿Qué encontrarás en la formación?</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide fase">
+              <div class="role-box">
+                <div class="image-wrapper">
+                  <img
+                    src="imagenes/exploracion.webp"
+                    alt="Exploracion gamificada"
+                  />
+                </div>
+                <div class="text-content">
+                  <h4>Exploración gamificada de Tech City.</h4>
+                  <p>
+                    ¡Explora Tech City, una ciudad llena de misterios y
+                    desafíos! Esta es tu misión inicial: recorre sus distritos
+                    clave (Innovación, Sostenibilidad, Automatización)
+                    personalizando tu avatar. Interactúa con los personajes
+                    virtuales para obtener pistas, completa el mapa con puntos
+                    de interés y al finalizar obtendrás un informe con tu perfil
+                    de aprendizaje ej:
+                    <em>"Exploradora creativa"</em>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide fase">
+              <div class="role-box">
+                <div class="image-wrapper">
+                  <img
+                    src="imagenes/resolucion.jpg"
+                    alt="resolucion de retos"
+                  />
+                </div>
+                <div class="text-content">
+                  <h4>Resolución de retos por bloques.</h4>
+                  <p>
+                    ¡Emergencia en Tech City! Soluciona el sobrecalentamiento
+                    del cuadro de mandos de la central eléctrica. Usa la
+                    tecnología VR para diagnosticar el fallo, modela en 3D las
+                    piezas afectadas y simula la reparación. Si reduces el
+                    consumo energético un 10%, ganarás la insignia
+                    <em>"Especialista en eficiencia energética"</em>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide fase">
+              <div class="role-box">
+                <div class="image-wrapper">
+                  <img
+                    src="imagenes/desarrollo.webp"
+                    alt="desarrollo de un proyecto"
+                  />
+                </div>
+                <div class="text-content">
+                  <h4>Desarrollo de un proyecto personalizado.</h4>
+                  <p>
+                    Tech City requiere acción immediata. Los hospitales
+                    necesitan un dispensador de medicamentos accesible.
+                    Desarrolla un prototipo en Tinkercad que pueda ser activado
+                    por voz o festos, simula su funcionamiento con Arduino y
+                    preséntalo en la feria virtual de salud. Los tres mejores
+                    diseños escalarán posiciones en el panel de líderes de la
+                    ciudad.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide fase">
+              <div class="role-box">
+                <div class="image-wrapper">
+                  <img
+                    src="imagenes/participacion.jpg"
+                    alt="participacion en foros"
+                  />
+                </div>
+                <div class="text-content">
+                  <h4>Participación en foros y tutorías.</h4>
+                  <p>
+                    La cafetería de Tech City enfrenta una propuesta polémica:
+                    reemplazar el 50% del personal humano por robots baristas.
+                    Argumenta tu postura en el foro, debatiendo y fundamentando
+                    tus razones. Durante la tutoría, propón una solución
+                    innovadora que equilibre automatización y empleo. Si puedes
+                    lograr un consenso en el dilema, podrás desbloquear la
+                    insignia <em>"Mediador/a ético/a"</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide fase">
+              <div class="role-box">
+                <div class="image-wrapper">
+                  <img
+                    src="imagenes/reflexion.jpg"
+                    alt="reflexion y evaluación"
+                  />
+                </div>
+                <div class="text-content">
+                  <h4>Reflexión y evaluación final.</h4>
+                  <p>
+                    Deja tu huella en Tech City. Graba un discurso de 90
+                    segundos defendiendo la relevancia de tu proyecto para el
+                    futuro de la ciudad, completa una tabla de autoevaluación y
+                    difunde tu trabajo en redes sociales usando
+                    <em>#TechCityImpact</em> y etiquetando a tres personas
+                    clave. Tu aporte definirá tu legado y visibilidad en la
+                    comunidad
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Controles del slider -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="derechos">
         <h3><u>SOBRE NOSOTROS</u></h3>
@@ -244,24 +255,20 @@
       </div>
 
       <div class="redes">
-        <h3><u>SÍGUENOS EN LAS REDES</u></h3>
+        <h3><u>SÍGUENOS EN X</u></h3>
         <a
-          href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
+          href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA"
           target="_blank"
-          ><img src="../imagenes/facebook.png" alt="logo-facebook"
-        /></a>
-        <a href="https://x.com/turismoclm" target="_blank">
-          <img src="../imagenes/x.webp" alt="logo-x" />
+        >
+          <img
+            src="imagenes/x.webp"
+            alt="Siguenos en las redes sociales de X (EduPlay360°)"
+          />
         </a>
-        <a
-          href="https://www.instagram.com/turismocastillalamancha/?hl=es"
-          target="_blank"
-          ><img src="../imagenes/instagram.png" alt="logo-instagram"
-        /></a>
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="swiper.js" defer></script>
     <script src="nav.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>

@@ -10,19 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-     <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <img src="../imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <a href="index.html"
+          ><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo"
+        /></a>
         <p>SHAPING THE FUTURE</p>
       </div>
       <nav class="nav">
@@ -34,14 +32,38 @@
               <a href="../about-the-project/index.html">Sobre el proyecto</a>
               <a href="../sobre-nosotros/index.html">Nuestro equipo</a>
               <a href="index.html">Metodología innovadora</a>
-              <a href="../tecnologia/index.html">Tecnología</a>
-              <a href="../resultados-recursos/index.html"
+              <a href="../tecnologia/index.html">Evaluación</a>
+              <a href="../resultados-recursos/resultados.html"
                 >Resultados y Recursos</a
               >
             </div>
           </li>
           <li><a href="../contacto/index.html">Contactános</a></li>
         </ul>
+
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="mobile-overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="../index.html">Inicio</a>
+            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+            <div class="dropdown-sub">
+              <a href="../about-the-project/index.html">Sobre el proyecto</a>
+              <a href="../sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="index.html">Metodología innovadora</a>
+              <a href="../tecnologia/index.html">Evaluación</a>
+              <a href="../resultados-recursos/resultados.html"
+                >Resultados y Recursos</a
+              >
+            </div>
+            <a href="../contacto/index.html">Contactános</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -49,12 +71,13 @@
     <section class="hero">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1>lorem lorem lorem</h1>
+        <h1>Modelo instruccional escogido.</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          rem sequi quis maiores error magni, quaerat beatae, voluptatem
-          asperiores dolor nostrum. Repellendus numquam ab quidem inventore,
-          optio aliquid labore earum.
+          <strong>Shaping the Future</strong> se desarrolla bajo el modelo
+          instruccional <strong>ADDIE</strong> (Análisis, Diseño, Desarrollo,
+          Implementación, Evaluación). La elección de este modelo frente a otros
+          (ASSURE, 4C/ID, 7Cs de Conole, prototipado rápido) viene justificada
+          por las siguientes razones:
         </p>
         <button onclick="scrollToInfo()">Empezar</button>
       </div>
@@ -62,14 +85,6 @@
 
     <!---Pg.6 F.1. Modelo instruccional escogido.-->
     <section class="modelo" id="info">
-      <h2>Modelo instruccional escogido.</h2>
-      <p>
-        <strong>Shaping the Future</strong> se desarrolla bajo el modelo
-        instruccional <strong>ADDIE</strong> (Análisis, Diseño, Desarrollo,
-        Implementación, Evaluación). La elección de este modelo frente a otros
-        (ASSURE, 4C/ID, 7Cs de Conole, prototipado rápido) viene justificada por
-        las siguientes razones:
-      </p>
       <ul class="lista-modelo">
         <li>
           <strong>Duración del proyecto:</strong> se estima una duración de seis
@@ -182,7 +197,9 @@
             <div class="role-box">
               <h4>Cronograma de las fases y tareas</h4>
               <p>En esta foto veremos las fases resumidas en un cronograma</p>
-              <button onclick="ampliarImagen('metodologia-innovadora/images/cronograma.jpeg')">
+              <button
+                onclick="ampliarImagen('images/cronograma.jpeg')"
+              >
                 Ver Imagen
               </button>
             </div>
@@ -236,15 +253,42 @@
       </p>
     </section>
 
-    <footer class="footer">
-      <p>
-        &copy; 2025 EduPlay360°. Página ficticia. <br />
-        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
-        y Raquel.
-      </p>
+   <footer class="footer">
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          &copy; 2025 EduPlay360°. Página ficticia. <br />
+          Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
+          Ramón y Raquel."
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN X</u></h3>
+        <a href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA" target="_blank">
+          <img src="/imagenes/x.webp" alt="Siguenos en las redes sociales de X (EduPlay360°)" />
+        </a>
+      </div>
     </footer>
 
     <script src="script.js" defer></script>
+    <script src="/nav.js" defer></script>
+    <script src="/swiper.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarModalTexto()">×</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+
+<div id="img-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarModalImagen()">×</span>
+    <img id="modal-img" src="" alt="Imagen ampliada" style="max-width: 100%; height: auto;" />
+  </div>
+</div>
   </body>
 </html>

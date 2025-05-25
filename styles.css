@@ -8,6 +8,7 @@
   --font-main: "Montserrat", sans-serif;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +59,7 @@ body {
   white-space: nowrap;
 }
 
-/* Menú de navegación */
+/* ================= NAVIGATION ================= */
 .nav ul {
   display: flex;
   justify-content: center;
@@ -80,13 +82,14 @@ body {
   color: var(--color-blue);
 }
 
-/* Estilo para el contenedor del desplegable */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
 
 .dropdown-content {
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -94,9 +97,9 @@ body {
   min-width: 160px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
   transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-content a {
@@ -108,59 +111,25 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--color-blue-shadows);
+  background-color: #a4c2e9;
   color: var(--color-blue);
 }
 
-/* Mostrar el desplegable cuando el mouse pasa por encima */
 .dropdown:hover .dropdown-content {
-  display: block;
+  visibility: visible;
+  pointer-events: auto;
   opacity: 1;
   transform: translateY(0);
-  animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* Posicionamiento de submenús */
-.dropdown-sub {
-  position: relative;
-}
-
-.dropdown-sub-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 180px;
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.dropdown-sub:hover .dropdown-sub-content {
-  display: block;
-}
-
-/* Estilo de enlaces del submenú */
-.dropdown-sub-content a {
-  display: block;
-  padding: 10px 15px;
-  color: black;
-  text-decoration: none;
-}
-
-.dropdown-sub-content a:hover {
-  background-color: #f0f0f0;
-}
-
-
-/* MENÚ MÓVIL */
+/* ================= MOBILE MENU ================= */
 .mobile-overlay {
   position: fixed;
   height: 100%;
   width: 0;
   top: 0;
   left: 0;
-  background-color: rgba(0, 70, 170, 0.95);
+  background-color: rgba(17, 114, 250, 0.95);
   overflow-x: hidden;
   transition: 0.5s;
   z-index: 1000;
@@ -170,18 +139,15 @@ body {
   justify-content: center;
 }
 
-/* Botón cerrar */
 .mobile-overlay .close {
   position: absolute;
   top: 20px;
   right: 45px;
   font-size: 65px;
   color: white;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* Contenido del menú móvil */
 .mobile-overlay .overlay-content {
   display: flex;
   flex-direction: column;
@@ -191,55 +157,30 @@ body {
   width: 100%;
 }
 
-/* Links de nivel principal (incluye Inicio y Nuestra empresa) */
 .mobile-overlay .overlay-content > a,
 .mobile-overlay .overlay-content > .dropdown-toggle {
-  font-size: 28px; /* tamaño mayor */
+  font-size: 28px;
   padding: 12px;
   font-weight: 700;
   color: white;
-  display: block;
-  width: 100%;
   text-align: center;
+  width: 100%;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
   user-select: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Primer nivel dropdown (los links dentro de Nuestra empresa) */
 .mobile-overlay .overlay-content .dropdown > a {
   font-size: 22px;
-  padding: 10px; /* igual padding para que quede alineado */
+  padding: 10px;
   font-weight: 700;
   color: white;
   text-align: center;
   display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
 }
 
-/* Quitar margen para que no se desplace */
-.dropdown-sub {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-}
-
-/* Segundo nivel dropdown-sub (Resultados y Recursos) */
-.mobile-overlay .overlay-content .dropdown-sub a {
-  font-size: 16px;
-  padding: 8px; /* para que quede alineado con sus padres */
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
-}
-
-/* Contenedor del subsubmenu */
 .dropdown-sub {
   display: none;
   flex-direction: column;
@@ -249,27 +190,31 @@ body {
 
 .dropdown-sub.active {
   display: flex;
-  align-items: center;
 }
 
-/* Cursor para toggles */
+.dropdown-sub a {
+  font-size: 16px;
+  padding: 8px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+
 .dropdown-toggle {
   cursor: pointer;
 }
 
-/* Hover y foco para todos */
 .mobile-overlay .overlay-content a:hover,
 .mobile-overlay .overlay-content a:focus,
 .mobile-overlay .overlay-content .dropdown-toggle:hover,
 .mobile-overlay .overlay-content .dropdown-toggle:focus {
   background-color: rgba(255, 255, 255, 0.2);
-  color: var(--color-green); /* dorado para destacar */
   outline: none;
 }
 
-
-
-/*Banner*/
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   height: 400px;
@@ -286,31 +231,9 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.2)
-  );
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero-content {
@@ -322,13 +245,13 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 27;
+  font-size: 16px;
   margin-bottom: 2rem;
 }
 
@@ -350,18 +273,20 @@ body {
   background-color: var(--color-green-shadows);
 }
 
-.info button a{
-    text-decoration: none;
-    color: var(--bg-light)
+.info button a {
+  text-decoration: none;
+  color: var(--bg-light);
 }
 
+/* ================= CONTENT SECTIONS ================= */
 .actividades {
   padding: 40px;
   text-align: center;
 }
 
-.actividades h2{
-  font-size: 25;
+.actividades h2,
+.info-text h2 {
+  font-size: 25px;
   color: var(--color-blue-shadows);
   margin-bottom: 1rem;
 }
@@ -383,18 +308,12 @@ body {
 
 .info-text {
   flex: 1;
-  text-align: left;
+  text-align: center;
   min-width: 300px;
 }
 
-.info-text h2 {
-  font-size: 25px;
-  color: var(--color-blue-shadows);
-  margin-bottom: 1rem;
-}
-
 .info-text p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-dark);
   margin-bottom: 20px;
   max-width: 700px;
@@ -420,14 +339,14 @@ hr {
   background: var(--color-blue-shadows);
   border-radius: 50px;
   width: 60%;
-  margin: 2rem auto;
-  box-shadow: 0 2px 6px rgba(0, 70, 170, 0.2); 
+  margin: 1rem auto;
+  box-shadow: 0 2px 6px rgba(0, 70, 170, 0.2);
 }
 
+/* ================= SLIDER ================= */
 .swiper {
   position: relative;
   width: 100%;
-  height: auto;
   max-width: 80%;
 }
 
@@ -442,14 +361,13 @@ hr {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 30px 50px 30px 50px;
+  padding: 30px 50px;
   background: linear-gradient(90deg, #4d4e52 0%, #bcc0c7 100%);
   border-radius: 24px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   gap: 20px;
   max-width: 1500px;
   margin: 20px auto;
-  font-family: var(--font-main);
 }
 
 .role-box .image-wrapper {
@@ -462,7 +380,6 @@ hr {
 
 .role-box img {
   width: 260px;
-  height: auto;
   border-radius: 20px;
   object-fit: cover;
   display: block;
@@ -475,47 +392,48 @@ hr {
   gap: 12px;
 }
 
+.role-box h4,
+.role-box p {
+  color: var(--bg-light);
+  margin: 0;
+}
+
 .role-box h4 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--bg-light);
-  margin: 0;
 }
 
 .role-box p {
   font-size: 14px;
-  color: var(--bg-light);
   line-height: 1.6;
-  margin: 0;
   text-align: justify;
 }
 
-/*Botones de role-box*/
 .swiper-button-next,
 .swiper-button-prev {
-  position: absolute; 
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  display: flex;
-  align-items: flex-end;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.3s ease;
 }
 
 .swiper-button-prev {
-  left: -60px; 
+  left: -60px;
 }
 .swiper-button-next {
-  right: -100px;
+  right: -60px;
 }
 
-/* Estilo para todo el footer */
+/* ================= FOOTER ================= */
 .footer {
-  text-align: center;
   padding: 30px;
   background-color: var(--text-dark);
   color: var(--bg-light);
@@ -525,7 +443,6 @@ hr {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  text-align: center;
 }
 
 footer h3 {
@@ -534,9 +451,10 @@ footer h3 {
 }
 
 .derechos,
-.redes{
+.redes {
   flex: 1;
   margin: 10px;
+  text-align: center;
 }
 
 .derechos p {
@@ -555,33 +473,8 @@ footer .redes img {
 footer .redes img[src*="x.webp"] {
   transform: translateY(1.2px) scale(1.65);
 }
-/*--------------------------------*/
 
-.footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: var(--text-dark);
-  color: var(--bg-light);
-  font-size: 0.9rem;
-  margin-top: 2rem;
-}
-
-
-/*Responsive*/
-@media (max-width: 768px) {
-  .role-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .role-box img {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-
-/* Animaciones */
+/* ================= ANIMATIONS ================= */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -602,19 +495,35 @@ footer .redes img[src*="x.webp"] {
   }
 }
 
-/* Animación para el menú desplegable */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+/* ================= RESPONSIVE ================= */
+@media (max-width: 820px) {
+  .role-box {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .role-box img {
+    max-width: 300px;
+  }
+
+  .info {
+    padding: 60px;
+  }
+
+  .info-container {
+    margin-left: 0;
   }
 }
 
-/*Pagina web responsive (para el menu)*/
+@media screen and (max-width: 730px) {
+  .nav ul {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
 
 .menu {
   display: none;
@@ -628,13 +537,17 @@ footer .redes img[src*="x.webp"] {
   z-index: 1100;
 }
 
-@media screen and (max-width: 730px) {
-  .nav ul {
-    display: none;
+/* ======= EXTRAS PARA PANTALLAS GRANDES ======= */
+@media (min-width: 1200px) {
+  .hero-content h1 {
+    font-size: 42px;
   }
 
-  .menu {
-    display: block;
+  .info-container {
+    gap: 80px;
+  }
+
+  .role-box {
+    padding: 50px 80px;
   }
 }
-

@@ -119,11 +119,119 @@ body {
   transform: translateY(0);
   animation: fadeIn 0.3s ease-out forwards;
 }
+
+/* MENÚ MÓVIL */
+.mobile-overlay {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 114, 250, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón cerrar */
+.mobile-overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Contenido del menú móvil */
+.mobile-overlay .overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+}
+
+/* Links de nivel principal (incluye Inicio y Nuestra empresa) */
+.mobile-overlay .overlay-content > a,
+.mobile-overlay .overlay-content > .dropdown-toggle {
+  font-size: 28px; /* tamaño mayor */
+  padding: 12px;
+  font-weight: 700;
+  color: white;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Primer nivel dropdown (los links dentro de Nuestra empresa) */
+.mobile-overlay .overlay-content .dropdown > a {
+  font-size: 22px;
+  padding: 10px; /* igual padding para que quede alineado */
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Segundo nivel dropdown-sub (Resultados y Recursos) */
+.mobile-overlay .overlay-content .dropdown-sub a {
+  font-size: 16px;
+  padding: 8px; /* para que quede alineado con sus padres */
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Contenedor del subsubmenu */
+.dropdown-sub {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.dropdown-sub.active {
+  display: flex;
+  align-items: center;
+}
+
+/* Cursor para toggles */
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+/* Hover y foco para todos */
+.mobile-overlay .overlay-content a:hover,
+.mobile-overlay .overlay-content a:focus,
+.mobile-overlay .overlay-content .dropdown-toggle:hover,
+.mobile-overlay .overlay-content .dropdown-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+
 /*Banner*/
 .hero {
   position: relative;
   height: 400px;
-  background: url("#") center/cover no-repeat;
+  background: url("contacto\ banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,13 +280,13 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 25;
+  font-size: 16px;
   margin-bottom: 2rem;
 }
 
@@ -344,5 +452,29 @@ footer .redes img[src*="x.webp"] {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/*Pagina web responsive (para el menu)*/
+
+.menu {
+  display: none;
+  color: var(--color-blue);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-blue);
+  border-radius: 10px;
+  background-color: white;
+  z-index: 1100;
+}
+
+@media screen and (max-width: 730px) {
+  .nav ul {
+    display: none;
+  }
+
+  .menu {
+    display: block;
   }
 }

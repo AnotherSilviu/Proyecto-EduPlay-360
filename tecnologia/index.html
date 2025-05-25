@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tecnología</title>
+    <title>Evaluación</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../imagenes/logo.jpeg" />
     <link
@@ -14,16 +14,14 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
 
   <body>
     <header class="header">
       <div class="logo">
-        <img src="../imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <a href="/index.html"
+          ><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo"
+        /></a>
         <p>SHAPING THE FUTURE</p>
       </div>
       <nav class="nav">
@@ -37,7 +35,7 @@
               <a href="../metodologia-innovadora/index.html"
                 >Metodología innovadora</a
               >
-              <a href="index.html">Tecnología</a>
+              <a href="index.html">Evaluación</a>
               <a href="../resultados-recursos/index.html"
                 >Resultados y Recursos</a
               >
@@ -45,6 +43,32 @@
           </li>
           <li><a href="../contacto/index.html">Contactános</a></li>
         </ul>
+
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="mobile-overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="/index.html">Inicio</a>
+            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+            <div class="dropdown-sub">
+              <a href="/about-the-project/index.html">Sobre el proyecto</a>
+              <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="/metodologia-innovadora/index.html"
+                >Metodología innovadora</a
+              >
+              <a href="index.html">Evaluación</a>
+              <a href="/resultados-recursos/resultados.html"
+                >Recursos y Resultados</a
+              >
+            </div>
+            <a href="contacto/index.html">Contactános</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -52,12 +76,13 @@
     <section class="hero">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1>lorem lorem lorem</h1>
+        <h1>Evaluación</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          rem sequi quis maiores error magni, quaerat beatae, voluptatem
-          asperiores dolor nostrum. Repellendus numquam ab quidem inventore,
-          optio aliquid labore earum.
+          En esta sección encontrarás todas las especificaciones referentes a la
+          evaluación: los recursos tecnológicos que serán necesario dominar para
+          completar la formación satisfactoria, los criterios, instrumentos y
+          los contenidos de aprendizaje que se desarrollarán durante todo el
+          proceso educativo.
         </p>
         <button onclick="scrollToInfo()">Empezar</button>
       </div>
@@ -65,41 +90,41 @@
 
     <!---Pg.17 F.1. Opción tecnológica escogida-->
     <section class="modelo" id="info">
-      <h2>Opción tecnológica escogida</h2>
-      <p>
-        Se destacan dos subapartados <strong>software</strong> y
-        <strong>hardware</strong>.
-      </p>
-      <ul class="lista-modelo">
-        <li>
-          <strong>En el apartado de software</strong> se encuentran las
-          siguientes herramientas: plataforma central gamificada (Moodle con
-          plugins sobre gamificación como Badges y Level Up, para gestionar la
-          narrativa del proyecto, progresiones y recompensas, totalmente
-          compatible con plataformas móviles fomentando así el Mobile Learning),
-          herramientas de diseño 3D (Tinkercad y Blender para prototipado e
-          impresión), entornos de realidad virtual (Mozilla Hubs o EngageVR para
-          simulaciones inmersivas) y software de robótica (Blockly y Arduino
-          IDE)
-        </li>
-        <li>
-          <strong>En los recursos hardware</strong> destacan: dispositivos de RV
-          (por ejemplo, Oculus Quest 2 o HTC Vive Focus 3), modelos básicos de
-          impresión 3D (como Creality Ender 3), kits de robótica básica (arduino
-          starter kits) y los ordenadores particulares de las personas
-          participantes.
-        </li>
+  <h2>Opción tecnológica escogida</h2>
+
+  <div class="cuadrados-container">
+    <div class="cuadrado">
+      <h3>Software</h3>
+      <p>Durante el recorrido por Tech City, tendrás acceso a una serie de herramientas digitales clave para llevar a cabo tus misiones:</p>
+      <ul>
+        <li><strong>Plataforma gamificada:</strong> Usamos Moodle con plugins como Badges y Level Up para seguir tu progreso, otorgarte recompensas y mantener viva la narrativa del proyecto.</li>
+        <li><strong>Diseño 3D:</strong> Crea y prototipa en entornos como Tinkercad y Blender, ideales para iniciarte en el modelado y la impresión 3D.</li>
+        <li><strong>Realidad Virtual:</strong> Vive experiencias inmersivas en espacios como Mozilla Hubs o EngageVR, donde simularás escenarios reales.</li>
+        <li><strong>Robótica y programación:</strong> Aprende a programar con entornos visuales como Blockly o explora el mundo físico con Arduino IDE.</li>
       </ul>
-    </section>
+    </div>
+
+    <div class="cuadrado">
+      <h3>Hardware</h3>
+      <p>Para llevar tu aprendizaje al siguiente nivel, trabajaremos con una combinación de dispositivos físicos:</p>
+      <ul>
+        <li><strong>Gafas de Realidad Virtual:</strong> como Oculus Quest 2 o HTC Vive Focus 3 para entrar en entornos simulados.</li>
+        <li><strong>Impresoras 3D:</strong> como la Creality Ender 3 para dar vida a tus diseños.</li>
+        <li><strong>Kits de robótica básica:</strong> (Arduino Starter Kits) para montar, programar y experimentar.</li>
+        <li><strong>Tu propio ordenador:</strong> que será tu centro de operaciones personal.</li>
+      </ul>
+    </div>
+  </div>
+</section>
     <hr />
     <!---Pg.15. Criterios e instrumentos de evaluación-->
     <section class="tabla-content">
       <h2>Criterios e instrumentos de evaluación</h2>
       <p>
-        El proceso de <strong>evaluación</strong> que se muestra en la Tabla 7
-        se estructura en torno a instrumentos formativos, reflexivos y
-        auténticos, y criterios de evaluación vinculados a las competencias
-        clave
+        En el <strong>proceso de evaluación</strong> que se muestra en la tabla
+        a continuación, se aprecia la siguiente estructura: elemento evaluado,
+        instrumento utilizado, criterios de evaluación asociados a las
+        competencias clave y persona al cargo de la evaluación.
       </p>
       <table class="responsive-table">
         <thead>
@@ -112,7 +137,9 @@
         </thead>
         <tbody>
           <tr>
-            <td data-label="Elemento evaluado"><strong>Retos semanales</strong></td>
+            <td data-label="Elemento evaluado">
+              <strong>Retos semanales</strong>
+            </td>
             <td data-label="Instrumento">Rúbricas específicas</td>
             <td data-label="Criterio">
               <strong>(C.1)</strong> Aplica tecnologías emergentes en la
@@ -127,7 +154,9 @@
             </td>
           </tr>
           <tr>
-            <td data-label="Elemento evaluado"><strong>Participación y presencia</strong></td>
+            <td data-label="Elemento evaluado">
+              <strong>Participación y presencia</strong>
+            </td>
             <td data-label="Instrumento">Foros + seguimiento LMS</td>
             <td data-label="Criterio">
               <strong>(C.2)</strong> Colabora de forma activa en equipos
@@ -142,7 +171,9 @@
             </td>
           </tr>
           <tr>
-            <td data-label="Elemento evaluado"><strong>Evaluación entre pares</strong></td>
+            <td data-label="Elemento evaluado">
+              <strong>Evaluación entre pares</strong>
+            </td>
             <td data-label="Instrumento">Observación estructurada</td>
             <td data-label="Criterio">
               <strong>(C.3)</strong> Comunica sus ideas y resultados con
@@ -156,7 +187,9 @@
             </td>
           </tr>
           <tr>
-            <td data-label="Elemento evaluado"><strong>Autoevaluación y reflexión</strong></td>
+            <td data-label="Elemento evaluado">
+              <strong>Autoevaluación y reflexión</strong>
+            </td>
             <td data-label="Instrumento">Cuestionario + portafolio</td>
             <td data-label="Criterio">
               <strong>(C.4)</strong> Identifica sus fortalezas y áreas de
@@ -169,7 +202,9 @@
             </td>
           </tr>
           <tr>
-            <td data-label="Elemento evaluado"><strong>Proyecto final</strong></td>
+            <td data-label="Elemento evaluado">
+              <strong>Proyecto final</strong>
+            </td>
             <td data-label="Instrumento">Rúbrica + presentación</td>
             <td data-label="Criterio">
               <strong>(C.1, C.5)</strong> Gestiona un proyecto tecnológico
@@ -190,11 +225,9 @@
     <section class="tabla-content">
       <h2>Contenidos de aprendizaje</h2>
       <p>
-        Los contenidos que se muestran en la Tabla 5 se agrupan en
-        <strong>5 bloques</strong> temáticos desarrollados durante la
-        <strong>fase de implementación</strong> (de la semana 13 a la 23). La
-        representación visual de la secuencia didáctica puede verse en la Figura
-        5.
+        Los contenidos que se desarrollarán en la formación se muestran en la
+        siguiente tabla. Se agrupan en 5 bloques temáticos desarrollados durante
+        la fase de implementación (desde la semana 13 hasta la 23).
       </p>
       <table>
         <thead>
@@ -241,15 +274,26 @@
       </table>
     </section>
 
-    <footer class="footer">
-      <p>
-        &copy; 2025 EduPlay360°. Página ficticia. <br />
-        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
-        y Raquel.
-      </p>
+   <footer class="footer">
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          &copy; 2025 EduPlay360°. Página ficticia. <br />
+          Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
+          Ramón y Raquel."
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN X</u></h3>
+        <a href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA" target="_blank">
+          <img src="/imagenes/x.webp" alt="Siguenos en las redes sociales de X (EduPlay360°)" />
+        </a>
+      </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="/nav.js" defer></script>
+    <script src="/swiper.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

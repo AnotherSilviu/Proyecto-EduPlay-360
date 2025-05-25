@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tecnología</title>
+    <title>Resultados y Recursos</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../imagenes/logo.jpeg" />
     <link
@@ -23,7 +23,9 @@
   <body>
     <header class="header">
       <div class="logo">
-        <img src="../imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <a href="/index.html"
+          ><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo"
+        /></a>
         <p>SHAPING THE FUTURE</p>
       </div>
       <nav class="nav">
@@ -37,22 +39,43 @@
               <a href="../metodologia-innovadora/index.html"
                 >Metodología innovadora</a
               >
-              <a href="../tecnologia/index.html">Tecnología</a>
-              <div class="dropdown-sub">
-                <a href="#">Resultados y Recursos</a>
-                <div class="dropdown-sub-content">
-                  <a href="resultados.html">Resultados</a>
-                  <a href="recursos.html">Recursos</a>
-                </div>
-              </div>
+              <a href="../tecnologia/index.html">Evaluación</a>
+              <a href="resultados.html"
+                >Resultados y Recursos</a
+              >
             </div>
           </li>
           <li><a href="../contacto/index.html">Contactános</a></li>
         </ul>
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="mobile-overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="/index.html">Inicio</a>
+            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+            <div class="dropdown-sub">
+              <a href="/about-the-project/index.html">Sobre el proyecto</a>
+              <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="/metodologia-innovadora/index.html"
+                >Metodología innovadora</a
+              >
+              <a href="/tecnologia/index.html">Evaluación</a>
+              <a href="resultados.html"
+                >Recursos y Resultados</a
+              >
+            </div>
+            <a href="/contacto/index.html">Contactános</a>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <div id="resultados">
+    
     <!--Breve Descripción-->
     <section class="hero">
       <div class="overlay"></div>
@@ -70,6 +93,8 @@
     </section>
 
     <!---Pg.9-10 F.7. Presupuesto estimado para la elaboración del proyecto.-->
+<div id="resultados"></div>
+    <h1 class="titulo">RESULTADOS</h1>
 
     <section class="presupuesto" id="resultados">
       <h2>Presupuesto estimado para la elaboración del proyecto.</h2>
@@ -303,8 +328,9 @@
     </section>
 </div>
 
+
 <div id="recursos">
-    <!--RECURSOS-->
+  <h1 class="titulo">RECURSOS</h1>
     <!---Pg.8 F.5. Cronograma de las fases y tareas-->
 
     <section class="presupuesto" id="info">
@@ -427,15 +453,26 @@
       </ul>
     </section>
 </div>
-    <footer class="footer">
-      <p>
-        &copy; 2025 EduPlay360°. Página ficticia. <br />
-        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
-        y Raquel.
-      </p>
+   <footer class="footer">
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          &copy; 2025 EduPlay360°. Página ficticia. <br />
+          Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
+          Ramón y Raquel."
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN X</u></h3>
+        <a href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA" target="_blank">
+          <img src="imagenes/x.webp" alt="Siguenos en las redes sociales de X (EduPlay360°)" />
+        </a>
+      </div>
     </footer>
 
     <script src="script.js" defer></script>
+    <script src="/nav.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>

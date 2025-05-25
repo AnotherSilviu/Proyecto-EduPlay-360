@@ -2,10 +2,14 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="EduPlay360° - Formación gamificada en tecnologías emergentes como realidad virtual, robótica y diseño 3D. Descubre el proyecto 'Shaping the Future'."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre el proyecto</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="../imagenes/logo.jpeg" />
+    <link rel="icon" href="/imagenes/logo.jpeg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -14,83 +18,96 @@
   <body>
     <header class="header">
       <div class="logo">
-        <img src="../imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <a href="/index.html"
+          ><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo"
+        /></a>
         <p>SHAPING THE FUTURE</p>
       </div>
       <nav class="nav">
         <ul>
-          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="/index.html">Inicio</a></li>
           <li class="dropdown">
             <a href="#">Nuestra empresa</a>
             <div class="dropdown-content">
               <a href="index.html">Sobre el proyecto</a>
-              <a href="../sobre-nosotros/index.html">Nuestro equipo</a>
-              <a href="../metodologia-innovadora/index.html"
+              <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="/metodologia-innovadora/index.html"
                 >Metodología innovadora</a
               >
-              <a href="../tecnologia/index.html">Tecnología</a>
-              <a href="../resultados-recursos/index.html"
+              <a href="/tecnologia/index.html">Evaluación</a>
+              <a href="/resultados-recursos/resultados.html"
                 >Resultados y Recursos</a
               >
             </div>
           </li>
-          <li><a href="../contacto/index.html">Contactános</a></li>
+          <li><a href="/contacto/index.html">Contáctanos</a></li>
         </ul>
+
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)" aria-label="Abrir menú de navegación"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="mobile-overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="/index.html">Inicio</a>
+            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+            <div class="dropdown-sub">
+              <a href="index.html">Sobre el proyecto</a>
+              <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="/metodologia-innovadora/index.html"
+                >Metodología innovadora</a
+              >
+              <a href="/tecnologia/index.html">Evaluación</a>
+              <a href="/resultados-recursos/resultados.html"
+                >Resultados y Recursos</a
+              >
+            </div>
+
+            <a href="/contacto/index.html">Contáctanos</a>
+          </div>
+        </div>
       </nav>
     </header>
-
+<main>
     <!--Breve Descripción-->
     <section class="hero">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1>lorem lorem lorem</h1>
+        <h1>¿En qué consiste nuestro proyecto?</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          rem sequi quis maiores error magni, quaerat beatae, voluptatem
-          asperiores dolor nostrum. Repellendus numquam ab quidem inventore,
-          optio aliquid labore earum.
+          El objetivo del proyecto es
+          <strong>fortalecer las competencias digitales</strong> avanzadas de
+          sus empleados y empleadas, facilitando la integración de tecnologías
+          emergentes como la robótica colaborativa, la realidad virtual y la
+          impresión 3D. Este proyecto tendrá una <strong>duración</strong> de
+          seis meses, de los cuales tres de ellos supondrán la parte formación
+          activa. Por su diseño, está <strong>dirigida</strong> a un grupo de 50
+          personas empleadas de diferentes startups.
         </p>
         <button onclick="scrollToInfo()">Empezar</button>
       </div>
     </section>
 
-    <!---Pg.3. A. Definición y contextualización del proyecto.-->
-    <section class="info" id="info">
-      <h2>Definición y contextualización del proyecto.</h2>
-      <p>
-        La convocatoria parte de un partner especializado en innovación
-        tecnológica, que impulsa un concurso para desarrollar una formación
-        virtual dirigida a startups emergentes. El objetivo es fortalecer las
-        competencias digitales avanzadas de sus empleados y empleadas,
-        facilitando la integración de tecnologías emergentes como la robótica
-        colaborativa, la realidad virtual y la impresión 3D en proyectos
-        disruptivos. El proyecto tendrá una duración de seis meses, de los
-        cuales tres de ellos supondrán la fase de implementación o formación
-        activa. Está dirigida a un grupo de 50 personas empleadas de diferentes
-        startups.
-      </p>
-    </section>
-    <hr />
-    <!---Pg.3. B. Descripción resumida del proyecto y justificación.-->
+    <!---Pg.3. B. Descripción resumida del proyecto y justificación. CAMBIAR VIDEO TEASER-->
     <section class="info" id="info">
       <h2>Descripción resumida del proyecto y justificación.</h2>
-      <p>
-        Shaping the Future es una experiencia formativa innovadora cuyo eje
-        vertebrador es la gamificación, acompañada de metodologías activas como
-        el Aprendizaje Basado en Proyectos (ABP), Aprendizaje Basado en Retos
-        (ABR), el Diseño Universal para el Aprendizaje (DUA) y el aprendizaje
-        móvil y social (mobile & social learning). A través de un entorno
-        inmersivo llamado Tech City, los y las participantes asumirán roles
-        activos en la resolución de misiones y desafíos que simulan problemas
-        del mundo real: desde la eficiencia industrial hasta la sostenibilidad
-        urbana. Todo ello utilizando tecnologías emergentes en entornos
-        colaborativos virtuales. Además, este proyecto promueve un modelo
-        tecnopedagógico orientado al desarrollo de competencias en acción, donde
-        la tecnología no es solo un canal de contenidos, sino un medio para
-        experimentar, colaborar y construir conocimiento.
-      </p>
+      <div class="video-container">
+        <iframe
+          width="70%"
+          height="250"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Teaser del proyecto"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </section>
     <hr />
+
     <!---Pg.3. C. Objetivos generales-->
     <section class="info">
       <h2>Objetivos generales</h2>
@@ -122,15 +139,25 @@
         </li>
       </ul>
     </section>
-
+</main>
     <footer class="footer">
-      <p>
-        &copy; 2025 EduPlay360°. Página ficticia. <br />
-        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite, Ramón
-        y Raquel.
-      </p>
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          &copy; 2025 EduPlay360°. Página ficticia. <br />
+          Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
+          Ramón y Raquel."
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN X</u></h3>
+        <a href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA" target="_blank">
+          <img src="../imagenes/x.webp" alt="Siguenos en las redes sociales de X (EduPlay360°)" />
+        </a>
+      </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="/nav.js" defer></script>
   </body>
 </html>

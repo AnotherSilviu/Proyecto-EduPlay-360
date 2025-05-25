@@ -1,16 +1,3 @@
-// Inicializar el swiper
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,  // Solo una fase visible
-  spaceBetween: 10,  // Espacio entre las fases
-  navigation: {
-    nextEl: '.swiper-button-next',  // Botón siguiente
-    prevEl: '.swiper-button-prev',  // Botón anterior
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
 
 function mostrarFases(fase) {
   const fases = {
@@ -114,27 +101,10 @@ function mostrarFases(fase) {
   document.getElementById("modal").classList.remove("hidden");
 }
 
-function cerrarModal() {
+// Cerrar modal de texto
+function cerrarModalTexto() {
   document.getElementById("modal").classList.add("hidden");
 }
-
-function toggleDept(header) {
-  const grid = header.nextElementSibling;
-  grid.classList.toggle("hidden");
-}
-
-//Funcion de boton Empezar
-function scrollToInfo() {
-    document.getElementById('modelo').scrollIntoView({ behavior: 'smooth' });
-  }
-  
-  window.addEventListener('DOMContentLoaded', () => {
-    const animatables = document.querySelectorAll('.animate-in');
-    animatables.forEach((el, i) => {
-      el.style.animationDelay = `${i * 0.3}s`;
-    });
-  });
-  
 
   //Ampliar imagen
 function ampliarImagen(src) {
@@ -144,6 +114,7 @@ function ampliarImagen(src) {
     modal.classList.remove("hidden");
   }
 
-  function cerrarModal() {
-    document.getElementById("img-modal").classList.add("hidden");
-  }
+  // Cerrar modal de imagen
+function cerrarModalImagen() {
+  document.getElementById("img-modal").classList.add("hidden");
+}

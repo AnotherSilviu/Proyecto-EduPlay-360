@@ -14,7 +14,9 @@
   <body>
     <header class="header">
       <div class="logo">
-        <img src="../imagenes/logo.jpeg" alt="EduPlay360 Logo" />
+        <a href="/index.html"
+          ><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo"
+        /></a>
         <p>SHAPING THE FUTURE</p>
       </div>
       <nav class="nav">
@@ -28,12 +30,38 @@
               <a href="../metodologia-innovadora/index.html"
                 >Metodología innovadora</a
               >
-              <a href="../tecnologia/index.html">Tecnología</a>
+              <a href="../tecnologia/index.html">Evaluación</a>
               <a href="../resultados-recursos/index.html">Resultados y Recursos</a>
             </div>
           </li>
           <li><a href="index.html">Contactános</a></li>
         </ul>
+
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="mobile-overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="/index.html">Inicio</a>
+            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+            <div class="dropdown-sub">
+              <a href="/about-the-project/index.html">Sobre el proyecto</a>
+              <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
+              <a href="/metodologia-innovadora/index.html"
+                >Metodología innovadora</a
+              >
+              <a href="/tecnologia/index.html">Evaluación</a>
+              <a href="/resultados-recursos/resultados.html"
+                >Recursos y Resultados</a
+              >
+            </div>
+            <a href="index.html">Contactános</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -106,26 +134,14 @@
       </div>
 
       <div class="redes">
-        <h3><u>SÍGUENOS EN LAS REDES</u></h3>
-        <a
-          href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
-          target="_blank"
-          ><img
-            src="../imagenes/facebook.png"
-            alt="logo-facebook"
-           
-        /></a>
+        <h3><u>SÍGUENOS EN X</u></h3>
         <a href="https://x.com/turismoclm" target="_blank">
           <img src="../imagenes/x.webp" alt="logo-x"/>
         </a>
-        <a
-          href="https://www.instagram.com/turismocastillalamancha/?hl=es"
-          target="_blank"
-          ><img src="../imagenes/instagram.png" alt="logo-instagram" 
-        /></a>
       </div>
     </footer>
 
     <script src="script.js" defer></script>
+    <script src="/nav.js" defer></script>
   </body>
 </html>

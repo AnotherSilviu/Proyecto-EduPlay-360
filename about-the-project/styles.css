@@ -8,6 +8,7 @@
   --font-main: "Montserrat", sans-serif;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +59,7 @@ body {
   white-space: nowrap;
 }
 
-/* Menú de navegación */
+/* ================= NAVIGATION ================= */
 .nav ul {
   display: flex;
   justify-content: center;
@@ -80,7 +82,7 @@ body {
   color: var(--color-blue);
 }
 
-/* Estilo para el contenedor del desplegable */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -108,22 +110,119 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--color-blue-shadows);
+  background-color: #a4c2e9;
   color: var(--color-blue);
 }
 
-/* Mostrar el desplegable cuando el mouse pasa por encima */
 .dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
   transform: translateY(0);
   animation: fadeIn 0.3s ease-out forwards;
 }
-/*Banner*/
+
+/* ================= MOBILE MENU ================= */
+.mobile-overlay {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 114, 250, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mobile-overlay .overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+}
+
+.mobile-overlay .overlay-content > a,
+.mobile-overlay .overlay-content > .dropdown-toggle {
+  font-size: 28px;
+  padding: 12px;
+  font-weight: 700;
+  color: white;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mobile-overlay .overlay-content .dropdown > a {
+  font-size: 22px;
+  padding: 10px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.dropdown-sub {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.dropdown-sub.active {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-sub a {
+  font-size: 16px;
+  padding: 8px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.mobile-overlay .overlay-content a:hover,
+.mobile-overlay .overlay-content a:focus,
+.mobile-overlay .overlay-content .dropdown-toggle:hover,
+.mobile-overlay .overlay-content .dropdown-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   height: 400px;
-  background: url("imagenes/hero-vr.jpeg") center/cover no-repeat;
+  background: url("images/banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,31 +235,9 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+ inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.2)
-  );
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero-content {
@@ -172,13 +249,13 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 27;
+  font-size: 16px;
   margin-bottom: 2rem;
 }
 
@@ -198,13 +275,14 @@ body {
   background-color: var(--color-green-shadows);
 }
 
+/* ================= CONTENT SECTIONS ================= */
 .info{
   padding: 30px;
   text-align: center;
 }
 
 .info h2{
-  font-size: 25;
+  font-size: 25px;
   color: var(--color-blue-shadows);
   margin-bottom: 1rem;
 }
@@ -212,8 +290,30 @@ body {
 .info p{
   max-width: 700px;
   margin: auto;
-  font-size: 1.1rem;
+  font-size: 17px;
   color: #444;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 70, 170, 0.15);
+  background-color: #fff;
+  border: 2px solid var(--color-blue-shadows);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
 
 .lista-objetivos{
@@ -247,22 +347,61 @@ hr {
   box-shadow: 0 2px 6px rgba(0, 70, 170, 0.2); 
 }
 
-
-
-
+/* ================= FOOTER ================= */
 .footer {
-  text-align: center;
-  padding: 1.5rem;
+  padding: 30px;
   background-color: var(--text-dark);
   color: var(--bg-light);
   font-size: 0.9rem;
   margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
+footer h3 {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
 
+.derechos,
+.redes {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+}
 
+.derechos p {
+  font-size: 13px;
+  line-height: 1.5;
+}
 
-/* Animaciones */
+footer .redes img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+footer .redes img[src*="x.webp"] {
+  transform: translateY(1.2px) scale(1.65);
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+
+  .info {
+    padding: 60px;
+  }
+
+  .info-container {
+    margin-left: 0;
+  }
+}
+
+/* ================= ANIMATIONS ================= */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -292,5 +431,29 @@ hr {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/*Pagina web responsive (para el menu)*/
+
+.menu {
+  display: none;
+  color: var(--color-blue);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-blue);
+  border-radius: 10px;
+  background-color: white;
+  z-index: 1100;
+}
+
+@media screen and (max-width: 730px) {
+  .nav ul {
+    display: none;
+  }
+
+  .menu {
+    display: block;
   }
 }
