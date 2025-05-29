@@ -458,3 +458,155 @@ footer .redes img[src*="x.webp"] {
     display: block;
   }
 }
+
+
+/* ======== PANTALLAS MOVILES =========== */
+@media screen and (max-width: 400px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0; /* Previene colapsos */
+  }
+
+  .logo img {
+    height: 32px;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
+  .logo p {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textGlow 4s linear infinite;
+    flex-shrink: 1;
+    display: block;
+  }
+
+  .menu {
+    margin-left: auto;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .mobile-overlay .overlay-content > a,
+  .mobile-overlay .overlay-content > .dropdown-toggle {
+    font-size: 20px;  /* Antes era 28px */
+    padding: 10px;
+  }
+
+  .mobile-overlay .overlay-content .dropdown-sub a {
+    font-size: 14px;  /* Antes era 20px */
+    padding: 6px;
+  }
+
+  .mobile-overlay .close {
+    font-size: 40px;  /* Reducir el tamaño del botón de cierre */
+    right: 20px;
+    top: 15px;
+  }
+
+   /* HERO */
+  .hero {
+    height: auto;
+    min-height: 250px;
+    padding: 2rem 1rem;
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-content button,
+  .info button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* ================= CONTENT SECTIONS ================= */
+  .info {
+    padding: 30px;
+  }
+  
+  .info h2 {
+    font-size: 20px
+  }
+
+  .info p{
+  font-size: 13px;
+}
+ .lista-objetivos {
+    padding: 15px 15px 0 15px;
+  }
+
+  .lista-objetivos ul {
+    padding: 10px;
+  }
+
+  .lista-objetivos li {
+    padding: 0.6rem 1rem;
+    font-size: 13px;
+  }
+
+  .department-box h3 {
+    font-size: 16px;
+  }
+
+  .role-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .role-box {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .role-box h4 {
+    font-size: 14px;
+  }
+
+  .role-box p {
+    font-size: 13px;
+  }
+
+  .role-box button {
+    font-size: 12px;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .organigrama-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}

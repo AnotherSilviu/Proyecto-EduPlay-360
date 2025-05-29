@@ -349,7 +349,7 @@ body {
 }
 
 .info {
-  padding: 60px 40px;
+  padding: 40px;
   background-color: var(--bg-light);
 }
 
@@ -659,7 +659,7 @@ footer .redes img[src*="x.webp"] {
   }
 
   .mobile-overlay .overlay-content .dropdown-sub a {
-    font-size: 16px;  /* Antes era 20px */
+    font-size: 14px;  /* Antes era 20px */
     padding: 6px;
   }
 
@@ -700,6 +700,10 @@ footer .redes img[src*="x.webp"] {
   }
 
   /* ================= CONTENT SECTIONS ================= */
+  .actividades,
+  .info {
+    padding: 30px;
+  }
   .actividades h2,
   .info-text h2 {
     font-size: 20px
