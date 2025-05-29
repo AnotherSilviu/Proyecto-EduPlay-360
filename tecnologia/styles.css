@@ -175,21 +175,9 @@ body {
   cursor: pointer;
 }
 
-/* Primer nivel dropdown (los links dentro de Nuestra empresa) */
-.mobile-overlay .overlay-content .dropdown > a {
-  font-size: 22px;
-  padding: 10px; /* igual padding para que quede alineado */
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
-}
-
 /* Segundo nivel dropdown-sub (Resultados y Recursos) */
 .mobile-overlay .overlay-content .dropdown-sub a {
-  font-size: 16px;
+  font-size: 20px;
   padding: 8px; /* para que quede alineado con sus padres */
   font-weight: 700;
   color: white;
@@ -231,7 +219,7 @@ body {
 .hero {
   position: relative;
   height: 350px;
-  background: url("#") center/cover no-repeat;
+  background: url("/imagenes/Evaluacion-banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +304,7 @@ body {
 
 .modelo h2,
 .tabla-content h2{
-  font-size: 25;
+  font-size: 25px;
   color: var(--color-blue-shadows);
   margin-bottom: 1rem;
 }
@@ -325,7 +313,7 @@ body {
 .tabla-content p{
   max-width: 700px;
   margin: auto;
-  font-size: 1.1rem;
+  font-size: 16px;
   color: #444;
 }
 .cuadrados-container {

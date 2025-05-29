@@ -8,6 +8,7 @@
   --font-main: "Montserrat", sans-serif;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +59,7 @@ body {
   white-space: nowrap;
 }
 
-/* Menú de navegación */
+/* ================= NAVIGATION ================= */
 .nav ul {
   display: flex;
   justify-content: center;
@@ -76,11 +78,12 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus  {
   color: var(--color-blue);
 }
 
-/* Estilo para el contenedor del desplegable */
+/* DESPLEGABLES */
 .dropdown {
   position: relative;
 }
@@ -107,14 +110,20 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropdown-content a:focus {
   background-color: var(--color-blue-shadows);
   color: var(--color-blue);
+  outline: none;
 }
-
-/* Posicionamiento de submenús */
+/* ---------------------------------------- */
+/* Submenú */
 .dropdown-sub {
   position: relative;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .dropdown-sub-content {
@@ -132,7 +141,6 @@ body {
   display: block;
 }
 
-/* Estilo de enlaces del submenú */
 .dropdown-sub-content a {
   display: block;
   padding: 10px 15px;
@@ -140,12 +148,13 @@ body {
   text-decoration: none;
 }
 
-.dropdown-sub-content a:hover {
+.dropdown-sub-content a:hover,
+.dropdown-sub-content a:focus {
   background-color: #f0f0f0;
+  outline: none;
 }
 
-
-/* Mostrar el desplegable cuando el mouse pasa por encima */
+/* Mostrar desplegable al hover */
 .dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
@@ -153,7 +162,7 @@ body {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* MENÚ MÓVIL */
+/* ================= MOBILE MENU ================= */
 .mobile-overlay {
   position: fixed;
   height: 100%;
@@ -170,7 +179,6 @@ body {
   justify-content: center;
 }
 
-/* Botón cerrar */
 .mobile-overlay .close {
   position: absolute;
   top: 20px;
@@ -181,7 +189,6 @@ body {
   cursor: pointer;
 }
 
-/* Contenido del menú móvil */
 .mobile-overlay .overlay-content {
   display: flex;
   flex-direction: column;
@@ -191,10 +198,9 @@ body {
   width: 100%;
 }
 
-/* Links de nivel principal (incluye Inicio y Nuestra empresa) */
 .mobile-overlay .overlay-content > a,
 .mobile-overlay .overlay-content > .dropdown-toggle {
-  font-size: 28px; /* tamaño mayor */
+  font-size: 28px; 
   padding: 12px;
   font-weight: 700;
   color: white;
@@ -208,22 +214,9 @@ body {
   cursor: pointer;
 }
 
-/* Primer nivel dropdown (los links dentro de Nuestra empresa) */
-.mobile-overlay .overlay-content .dropdown > a {
-  font-size: 22px;
-  padding: 10px; /* igual padding para que quede alineado */
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
-}
-
-/* Segundo nivel dropdown-sub (Resultados y Recursos) */
 .mobile-overlay .overlay-content .dropdown-sub a {
-  font-size: 16px;
-  padding: 8px; /* para que quede alineado con sus padres */
+  font-size: 20px;
+  padding: 8px; 
   font-weight: 700;
   color: white;
   text-align: center;
@@ -250,7 +243,7 @@ body {
   cursor: pointer;
 }
 
-/* Hover y foco para todos */
+/* Hover y foco para movil */
 .mobile-overlay .overlay-content a:hover,
 .mobile-overlay .overlay-content a:focus,
 .mobile-overlay .overlay-content .dropdown-toggle:hover,
@@ -259,12 +252,11 @@ body {
   outline: none;
 }
 
-
-/*Banner*/
+/* ================= BANNER SECTION ================= */
 .hero {
   position: relative;
   height: 350px;
-  background: url("#") center/cover no-repeat;
+  background: url("/imagenes/resultados-banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,10 +270,7 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
@@ -337,10 +326,13 @@ body {
   font-family: var(--font-main);
 }
 
-.hero-content button:hover {
+.hero-content button:hover,
+.hero-content button:focus {
   background-color: var(--color-green-shadows);
+  outline: none;
 }
-
+/* --------------------------------- */
+/* TITULOS Y SECCIONES */
 .titulo {
   font-size: 30px;
   color: var(--color-blue-shadows);
@@ -352,7 +344,8 @@ body {
 .criterios,
 .grafico,
 .tabla-content,
-.indicadores{
+.indicadores,
+.bibliografia{
   padding: 30px;
   text-align: center;
 }
@@ -361,7 +354,8 @@ body {
 .criterios h2,
 .grafico h2,
 .indicadores h2,
-.tabla-content h2{
+.tabla-content h2,
+.bibliografia h2{
   font-size: 25px;
   color: var(--color-blue-shadows);
   margin-bottom: 1rem;
@@ -371,24 +365,45 @@ body {
 .criterios p,
 .grafico p,
 .indicadores p,
-.tabla-content p{
+.tabla-content p,
+.bibliografia p{
   max-width: 700px;
   margin: auto;
   font-size: 16px;
-  color: #444;
+  color: var(--text-dark);
 }
 
-.lista-criterios{
+/* GRÁFICOS */
+#graficoPresupuesto {
+  width: 100%;
+  max-width: 600px;
+  height: 400px; /* Ajusta según necesites */
+}
+
+.grafico-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 500px;
+}
+/* ------------------------------ */
+
+/* LISTAS */
+.lista-criterios,
+.bibliografia {
   list-style: none;
   padding: 20px 50px 0 50px;
-
 }
 
-.lista-criterios ul {
+.lista-criterios ul,
+.bibliografia ul {
   padding: 20px
 }
 
-.lista-criterios li{
+.lista-criterios li,
+.bibliografia li{
   padding: 0.8rem 1.2rem;
   margin-bottom: 0.5rem;
   background-color: #ffffff;
@@ -396,8 +411,38 @@ body {
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  list-style: none;
 }
 
+.cronograma-img,
+.storyboard-img  {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.cronograma-img img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.storyboard-img img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cronograma-img img:hover,
+.storyboard-img img:hover {
+  transform: scale(1.02);
+}
 
 hr {
   border: none;
@@ -563,8 +608,39 @@ footer .redes img[src*="x.webp"] {
   }
 }
 
-/* Responsive para pantallas pequeñas */
+/*Pagina web responsive (para el menu)*/
+.menu {
+  display: none;
+  color: var(--color-blue);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-blue);
+  border-radius: 10px;
+  background-color: white;
+  z-index: 1100;
+}
+
+@media screen and (max-width: 730px) {
+  .nav ul {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+  /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
+  .grafico-container {
+    flex-direction: column;
+  }
+  .tabla-indicadores, .tabla-indicadores tbody, .tabla-indicadores tr, .tabla-indicadores td, .tabla-indicadores th {
+    display: block;
+    width: 100%;
+  }
+
   table {
     font-size: 12px;
   }
@@ -600,9 +676,7 @@ footer .redes img[src*="x.webp"] {
     display: block;
     margin-bottom: 0.3rem;
   }
-}
 
-@media (max-width: 768px) {
   .responsive-table thead {
     display: none;
   }
@@ -637,13 +711,7 @@ footer .redes img[src*="x.webp"] {
   .responsive-table td:last-child {
     border-bottom: none;
   }
-}
 
-@media (max-width: 768px) {
-  .tabla-indicadores, .tabla-indicadores tbody, .tabla-indicadores tr, .tabla-indicadores td, .tabla-indicadores th {
-    display: block;
-    width: 100%;
-  }
 
   .tabla-indicadores tr {
     margin-bottom: 1.5rem;
@@ -664,29 +732,5 @@ footer .redes img[src*="x.webp"] {
     padding: 1rem;
     border-top: none;
     background-color: #fff;
-  }
-}
-
-/*Pagina web responsive (para el menu)*/
-
-.menu {
-  display: none;
-  color: var(--color-blue);
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--color-blue);
-  border-radius: 10px;
-  background-color: white;
-  z-index: 1100;
-}
-
-@media screen and (max-width: 730px) {
-  .nav ul {
-    display: none;
-  }
-
-  .menu {
-    display: block;
   }
 }

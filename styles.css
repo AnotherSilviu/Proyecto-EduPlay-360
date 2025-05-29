@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -78,7 +78,8 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus {
   color: var(--color-blue);
 }
 
@@ -88,8 +89,7 @@ body {
 }
 
 .dropdown-content {
-  visibility: hidden;
-  pointer-events: none;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -110,16 +110,56 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropdown-content a:focus {
   background-color: #a4c2e9;
   color: var(--color-blue);
+  outline: none;
 }
 
+/* Submenú */
+.dropdown-sub {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.dropdown-sub-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dropdown-sub:hover .dropdown-sub-content {
+  display: block;
+}
+
+.dropdown-sub-content a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-sub-content a:hover,
+.dropdown-sub-content a:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+/* Mostrar desplegable al hover */
 .dropdown:hover .dropdown-content {
-  visibility: visible;
-  pointer-events: auto;
+  display: block;
   opacity: 1;
   transform: translateY(0);
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 /* ================= MOBILE MENU ================= */
@@ -146,6 +186,7 @@ body {
   font-size: 65px;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mobile-overlay .overlay-content {
@@ -163,6 +204,7 @@ body {
   padding: 12px;
   font-weight: 700;
   color: white;
+  display: block;
   text-align: center;
   width: 100%;
   text-decoration: none;
@@ -172,15 +214,18 @@ body {
   cursor: pointer;
 }
 
-.mobile-overlay .overlay-content .dropdown > a {
-  font-size: 22px;
-  padding: 10px;
+.mobile-overlay .overlay-content .dropdown-sub a {
+  font-size: 20px;
+  padding: 8px; 
   font-weight: 700;
   color: white;
   text-align: center;
   display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
 }
 
+/* Contenedor del subsubmenu */
 .dropdown-sub {
   display: none;
   flex-direction: column;
@@ -190,16 +235,7 @@ body {
 
 .dropdown-sub.active {
   display: flex;
-}
-
-.dropdown-sub a {
-  font-size: 16px;
-  padding: 8px;
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  display: block;
-  border-radius: 5px;
+  align-items: center;
 }
 
 .dropdown-toggle {
@@ -226,6 +262,7 @@ body {
   text-align: center;
   z-index: 0;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 
 .hero::before {
@@ -234,6 +271,25 @@ body {
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.2)
+  );
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -280,7 +336,7 @@ body {
 
 /* ================= CONTENT SECTIONS ================= */
 .actividades {
-  padding: 40px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -515,16 +571,6 @@ footer .redes img[src*="x.webp"] {
   }
 }
 
-@media screen and (max-width: 730px) {
-  .nav ul {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-}
-
 .menu {
   display: none;
   color: var(--color-blue);
@@ -536,6 +582,18 @@ footer .redes img[src*="x.webp"] {
   background-color: white;
   z-index: 1100;
 }
+
+@media screen and (max-width: 730px) {
+  .nav ul {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+
 
 /* ======= EXTRAS PARA PANTALLAS GRANDES ======= */
 @media (min-width: 1200px) {

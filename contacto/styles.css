@@ -175,21 +175,10 @@ body {
   cursor: pointer;
 }
 
-/* Primer nivel dropdown (los links dentro de Nuestra empresa) */
-.mobile-overlay .overlay-content .dropdown > a {
-  font-size: 22px;
-  padding: 10px; /* igual padding para que quede alineado */
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
-}
 
-/* Segundo nivel dropdown-sub (Resultados y Recursos) */
+/* Segundo nivel dropdown-sub*/
 .mobile-overlay .overlay-content .dropdown-sub a {
-  font-size: 16px;
+  font-size: 20px;
   padding: 8px; /* para que quede alineado con sus padres */
   font-weight: 700;
   color: white;
@@ -230,7 +219,7 @@ body {
 /*Banner*/
 .hero {
   position: relative;
-  height: 400px;
+  height: 300px;
   background: url("contacto\ banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -323,7 +312,7 @@ body {
 }
 
 .formulario p {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 2rem;
   color: #444;
 }

@@ -1,479 +1,390 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resultados y Recursos</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="../imagenes/logo.jpeg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="logo">
-        <a href="/index.html"
-          ><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo"
-        /></a>
-        <p>SHAPING THE FUTURE</p>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#">Nuestra empresa</a>
-            <div class="dropdown-content">
-              <a href="../about-the-project/index.html">Sobre el proyecto</a>
-              <a href="../sobre-nosotros/index.html">Nuestro equipo</a>
-              <a href="../metodologia-innovadora/index.html"
-                >Metodología innovadora</a
-              >
-              <a href="../tecnologia/index.html">Evaluación</a>
-              <a href="resultados.html"
-                >Resultados y Recursos</a
-              >
-            </div>
-          </li>
-          <li><a href="../contacto/index.html">Contactános</a></li>
-        </ul>
-        <!--Barra de navegación dinámica-->
-        <a onclick="openNav()" class="menu" href="javascript:void(0)"
-          ><strong>MENÚ</strong></a
-        >
-        <div class="mobile-overlay" id="mobile-menu">
-          <a onclick="closeNav()" href="javascript:void(0)" class="close"
-            >&times;</a
-          >
-          <div class="overlay-content">
-            <a href="/index.html">Inicio</a>
-            <a href="#" class="dropdown-toggle">Nuestra empresa</a>
-            <div class="dropdown-sub">
-              <a href="/about-the-project/index.html">Sobre el proyecto</a>
-              <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
-              <a href="/metodologia-innovadora/index.html"
-                >Metodología innovadora</a
-              >
-              <a href="/tecnologia/index.html">Evaluación</a>
-              <a href="resultados.html"
-                >Recursos y Resultados</a
-              >
-            </div>
-            <a href="/contacto/index.html">Contactános</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta
+      name="description"
+      content="EduPlay360° - Formación gamificada en tecnologías emergentes como realidad virtual, robótica y diseño 3D. Descubre el proyecto 'Shaping the Future'."
+    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultados y Recursos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="../imagenes/logo.jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="/index.html"><img src="/imagenes/logo.jpeg" alt="EduPlay360 Logo" /></a>
+      <p>SHAPING THE FUTURE</p>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Nuestra empresa</a>
+          <div class="dropdown-content">
+            <a href="../about-the-project/index.html">Sobre el proyecto</a>
+            <a href="../sobre-nosotros/index.html">Nuestro equipo</a>
+            <a href="../metodologia-innovadora/index.html">Metodología innovadora</a>
+            <a href="../tecnologia/index.html">Evaluación</a>
+            <a href="resultados.html">Resultados y Recursos</a>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    
-    <!--Breve Descripción-->
-    <section class="hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>lorem lorem lorem</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          rem sequi quis maiores error magni, quaerat beatae, voluptatem
-          asperiores dolor nostrum. Repellendus numquam ab quidem inventore,
-          optio aliquid labore earum.
-        </p>
-        <button onclick="document.getElementById('resultados').scrollIntoView({behavior: 'smooth'});">Resultados</button>
-<button onclick="document.getElementById('recursos').scrollIntoView({behavior: 'smooth'});">Recursos</button>
-      </div>
-    </section>
-
-    <!---Pg.9-10 F.7. Presupuesto estimado para la elaboración del proyecto.-->
-<div id="resultados"></div>
-    <h1 class="titulo">RESULTADOS</h1>
-
-    <section class="presupuesto" id="resultados">
-      <h2>Presupuesto estimado para la elaboración del proyecto.</h2>
-      <p>
-        El presupuesto del proyecto se ha elaborado considerando criterios de
-        eficiencia y realismo, alineado con las fases del modelo ADDIE. Incluye
-        costes directos e indirectos, garantizando la viabilidad y calidad de la
-        propuesta formativa.
-      </p>
-    </section>
-    <!--F7.1. Criterios generales de presupuesto-->
-    <section class="criterios" id="resultados">
-      <h2>Criterios generales de presupuesto:</h2>
-      <ul class="lista-criterios">
-        <li>
-          Costes ajustados según la dedicación real y reaprovechamiento de
-          recursos.
         </li>
-        <li>
-          Solo se imputan tareas directamente asociadas a la acción formativa.
-        </li>
-        <li>
-          El coste por <strong>persona/semana</strong> se reduce a
-          <strong>350€</strong>, considerando que parte de know-how, plataforma
-          y herramientas ya están desarrolladas internamente.
-        </li>
-        <li>
-          <strong>Tecnología:</strong> plataformas y simuladores parcialmente
-          amortizados, reducción del <strong>30%</strong> en licencias y
-          herramientas
-        </li>
-        <li>
-          Se mantiene <strong>inversión real</strong> en difusión (para llegar a
-          las startups) y en gestión y administración del proyecto.
-        </li>
+        <li><a href="../contacto/index.html">Contactános</a></li>
       </ul>
-    </section>
-    <hr />
-    <!--F.7.2. Tabla resumen de presupuesto por fases-->
-    <section class="tabla-content">
-      <h2>Tabla resumen de presupuesto por fases</h2>
-      <p>
-        Como se muestra en la Tabla 3, los costes del proyecto se han estimado
-        en función de tarifas orientativas del sector educativo y tecnológico,
-        considerando perfiles profesionales específicos y herramientas
-        necesarias para el desarrollo formativo. Se han tenido en cuenta costes
-        directos e indirectos, así como un pequeño margen para imprevistos, con
-        el fin de garantizar un presupuesto realista y ajustado al mercado.
-      </p>
-      <table class="responsive-table">
-        <thead>
-          <tr>
-            <th>Fase</th>
-            <th>Duración (Semanas)</th>
-            <th>Personas implicadas</th>
-            <th>Tareas principales</th>
-            <th>Coste estimado (€)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Fase">
-              <strong>Análisis</strong>
-            </td>
-            <td data-label="Duración">2</td>
-            <td data-label="Personas">4</td>
-            <td data-label="Tareas">
-              Detección de necesidades, benchmarketing, presupuesto inicial
-            </td>
-            <td data-label="Coste">2.800</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Diseño</strong>
-            </td>
-            <td data-label="Duración">3</td>
-            <td data-label="Personas">4</td>
-            <td data-label="Tareas">
-              Narrativa Tech City, itinerario gamificado, selección
-            </td>
-            <td data-label="Coste">4.200</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Desarrollo</strong>
-            </td>
-            <td data-label="Duración">7</td>
-            <td data-label="Personas">5</td>
-            <td data-label="Tareas">
-              Plataforma, VR/3D, contenidos interactivos
-            </td>
-            <td data-label="Coste">12.250</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Implementación</strong>
-            </td>
-            <td data-label="Duración">11</td>
-            <td data-label="Personas">5</td>
-            <td data-label="Tareas">
-              Puesta en marcha, tutorías técnicas, seguimiento
-            </td>
-            <td data-label="Coste">19.250</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Evaluación</strong>
-            </td>
-            <td data-label="Duración">1</td>
-            <td data-label="Personas">4</td>
-            <td data-label="Tareas">Informe final, ROI, encuestas NPS</td>
-            <td data-label="Coste">1.400</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Costes tecnología</strong>
-            </td>
-            <td data-label="Duración">-</td>
-            <td data-label="Personas">-</td>
-            <td data-label="Tareas">
-              Licencias RV, software 3D, plataforma adaptativa
-            </td>
-            <td data-label="Coste">3.849</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Difusión y Marketing</strong>
-            </td>
-            <td data-label="Duración">-</td>
-            <td data-label="Personas">-</td>
-            <td data-label="Tareas">Campaña de comunicación y redes</td>
-            <td data-label="Coste">2.500</td>
-          </tr>
-          <tr>
-            <td data-label="Fase">
-              <strong>Administración y Gestión</strong>
-            </td>
-            <td data-label="Duración">-</td>
-            <td data-label="Personas">-</td>
-            <td data-label="Tareas">
-              Coordinación interna, control financiero, RRHH
-            </td>
-            <td data-label="Coste">3.000</td>
-          </tr>
-          <tr>
-            <td colspan="4">
-              <strong>TOTAL ESTIMADO</strong>
-            </td>
-            <td colspan="1">
-              <strong>49.249</strong>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <hr />
-    <!---F7.3. Distrubución proporcional del presupuesto-->
-    <section class="grafico">
-      <h2>Distribución proporcional del presupuesto</h2>
-      <div class="grafico-container">
-        <canvas id="graficoPresupuesto" width="400" height="400"></canvas>
+      <!--Barra de navegación dinámica-->
+      <a onclick="openNav()" class="menu" href="javascript:void(0)"><strong>MENÚ</strong></a>
+      <div class="mobile-overlay" id="mobile-menu">
+        <a onclick="closeNav()" href="javascript:void(0)" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="/index.html">Inicio</a>
+          <a href="#" class="dropdown-toggle">Nuestra empresa</a>
+          <div class="dropdown-sub">
+            <a href="/about-the-project/index.html">Sobre el proyecto</a>
+            <a href="/sobre-nosotros/index.html">Nuestro equipo</a>
+            <a href="/metodologia-innovadora/index.html">Metodología innovadora</a>
+            <a href="/tecnologia/index.html">Evaluación</a>
+            <a href="resultados.html">Resultados y Recursos</a>
+          </div>
+          <a href="/contacto/index.html">Contactános</a>
+        </div>
       </div>
-    </section>
-<hr>
-    <!--Pg. 19 I.Indicados de calidad-->
-    <section class="indicadores">
-      <h2>Indicadores de Calidad</h2>
+    </nav>
+  </header>
+
+
+  <!--Breve Descripción-->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Resultados y Recursos</h1>
       <p>
-        Se considera especialmente importante considerar unos indicadores de
-        calidad que establezcan unos mínimos de éxito del proyecto.
-        Seguidamente, la Tabla 10 muestra los indicadores de calidad agrupados
-        en sectores:
+        En esta sección se encuentran los elementos conclusivos del proyecto. Podrás encontrar todos los resultados que
+        eduplay360 esperamos tras la realización de <em>Shaping The Future</em>, así como unos recursos de mucha
+        utilidad que ayudarán a conocer el proyecto en más profundidad.
       </p>
-      <table class="tabla-indicadores">
+      <button onclick="document.getElementById('resultados').scrollIntoView({behavior: 'smooth'});">Resultados</button>
+      <button onclick="document.getElementById('recursos').scrollIntoView({behavior: 'smooth'});">Recursos</button>
+    </div>
+  </section>
+
+  <!---Pg.9-10 F.7. Presupuesto estimado para la elaboración del proyecto.-->
+  <div id="resultados"></div>
+  <h1 class="titulo">RESULTADOS</h1>
+
+  <section class="presupuesto">
+    <h2>Presupuesto estimado para la elaboración del proyecto.</h2>
+    <p>
+      El presupuesto del proyecto se ha elaborado considerando criterios de
+      eficiencia y realismo, alineado con las fases del modelo ADDIE. Incluye
+      costes directos e indirectos, garantizando la viabilidad y calidad de la
+      propuesta formativa.
+    </p>
+  </section>
+  <!--F7.1. Criterios generales de presupuesto-->
+  <section class="criterios">
+    <h2>Criterios generales de presupuesto:</h2>
+    <ul class="lista-criterios">
+      <li>
+        Costes ajustados según la dedicación real y reaprovechamiento de
+        recursos.
+      </li>
+      <li>
+        Solo se imputan tareas directamente asociadas a la acción formativa.
+      </li>
+      <li>
+        El coste por <strong>persona/semana</strong> se reduce a
+        <strong>350€</strong>, considerando que parte de know-how, plataforma
+        y herramientas ya están desarrolladas internamente.
+      </li>
+      <li>
+        <strong>Tecnología:</strong> plataformas y simuladores parcialmente
+        amortizados, reducción del <strong>30%</strong> en licencias y
+        herramientas
+      </li>
+      <li>
+        Se mantiene <strong>inversión real</strong> en difusión (para llegar a
+        las startups) y en gestión y administración del proyecto.
+      </li>
+    </ul>
+  </section>
+  <hr />
+  <!--F.7.2. Tabla resumen de presupuesto por fases-->
+  <section class="tabla-content">
+    <h2>Tabla resumen de presupuesto por fases</h2>
+    <p>
+      Como se muestra en la Tabla 3, los costes del proyecto se han estimado
+      en función de tarifas orientativas del sector educativo y tecnológico,
+      considerando perfiles profesionales específicos y herramientas
+      necesarias para el desarrollo formativo. Se han tenido en cuenta costes
+      directos e indirectos, así como un pequeño margen para imprevistos, con
+      el fin de garantizar un presupuesto realista y ajustado al mercado.
+    </p>
+    <table class="responsive-table">
+      <thead>
         <tr>
-          <th>Participación</th>
-          <td>
-            <ul>
-              <li>Tasa de finalización superior al 85%</li>
-              <li>
-                Mínimo de 3 interacciones por semana en foros y retos
-                colaborativos.
-              </li>
-            </ul>
+          <th>Fase</th>
+          <th>Duración (Semanas)</th>
+          <th>Personas implicadas</th>
+          <th>Tareas principales</th>
+          <th>Coste estimado (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Fase">
+            <strong>Análisis</strong>
           </td>
+          <td data-label="Duración">2</td>
+          <td data-label="Personas">4</td>
+          <td data-label="Tareas">
+            Detección de necesidades, benchmarketing, presupuesto inicial
+          </td>
+          <td data-label="Coste">2.800</td>
         </tr>
         <tr>
-          <th>Aprendizaje</th>
-          <td>
-            <ul>
-              <li>
-                Resultados positivos en evaluaciones prácticas mediante
-                rúbricas.
-              </li>
-              <li>
-                Encuestas NPS de satisfacción general sobre las metodologías
-                aplicadas.
-              </li>
-            </ul>
+          <td data-label="Fase">
+            <strong>Diseño</strong>
           </td>
+          <td data-label="Duración">3</td>
+          <td data-label="Personas">4</td>
+          <td data-label="Tareas">
+            Narrativa Tech City, itinerario gamificado, selección
+          </td>
+          <td data-label="Coste">4.200</td>
         </tr>
         <tr>
-          <th>Impacto</th>
-          <td>
-            <ul>
-              <li>
-                Número de proyectos implementados por las startups participantes
-                post formación.
-              </li>
-              <li>
-                Reducción de tiempo y coste en procesos donde intervienen las
-                tecnologías aplicadas en la formación.
-              </li>
-            </ul>
+          <td data-label="Fase">
+            <strong>Desarrollo</strong>
           </td>
+          <td data-label="Duración">7</td>
+          <td data-label="Personas">5</td>
+          <td data-label="Tareas">
+            Plataforma, VR/3D, contenidos interactivos
+          </td>
+          <td data-label="Coste">12.250</td>
         </tr>
         <tr>
-          <th>Indicadores técnicos</th>
-          <td>
-            <ul>
-              <li>
-                Tiempo de respuesta de la plataforma inferior a 3 segundos.
-              </li>
-              <li>
-                Tiempo de resolución de incidencias inferior a 24 h (hábiles).
-              </li>
-            </ul>
+          <td data-label="Fase">
+            <strong>Implementación</strong>
+          </td>
+          <td data-label="Duración">11</td>
+          <td data-label="Personas">5</td>
+          <td data-label="Tareas">
+            Puesta en marcha, tutorías técnicas, seguimiento
+          </td>
+          <td data-label="Coste">19.250</td>
+        </tr>
+        <tr>
+          <td data-label="Fase">
+            <strong>Evaluación</strong>
+          </td>
+          <td data-label="Duración">1</td>
+          <td data-label="Personas">4</td>
+          <td data-label="Tareas">Informe final, ROI, encuestas NPS</td>
+          <td data-label="Coste">1.400</td>
+        </tr>
+        <tr>
+          <td data-label="Fase">
+            <strong>Costes tecnología</strong>
+          </td>
+          <td data-label="Duración">-</td>
+          <td data-label="Personas">-</td>
+          <td data-label="Tareas">
+            Licencias RV, software 3D, plataforma adaptativa
+          </td>
+          <td data-label="Coste">3.849</td>
+        </tr>
+        <tr>
+          <td data-label="Fase">
+            <strong>Difusión y Marketing</strong>
+          </td>
+          <td data-label="Duración">-</td>
+          <td data-label="Personas">-</td>
+          <td data-label="Tareas">Campaña de comunicación y redes</td>
+          <td data-label="Coste">2.500</td>
+        </tr>
+        <tr>
+          <td data-label="Fase">
+            <strong>Administración y Gestión</strong>
+          </td>
+          <td data-label="Duración">-</td>
+          <td data-label="Personas">-</td>
+          <td data-label="Tareas">
+            Coordinación interna, control financiero, RRHH
+          </td>
+          <td data-label="Coste">3.000</td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <strong>TOTAL ESTIMADO</strong>
+          </td>
+          <td colspan="1">
+            <strong>49.249</strong>
           </td>
         </tr>
-      </table>
-    </section>
-</div>
+      </tbody>
+    </table>
+  </section>
+  <hr />
+  <!---F7.3. Distrubución proporcional del presupuesto-->
+  <section class="grafico">
+    <h2>Distribución proporcional del presupuesto</h2>
+    <div class="grafico-container">
+      <canvas id="graficoPresupuesto" width="400" height="400"></canvas>
+    </div>
+  </section>
+  <hr>
+  <!--Pg. 19 I.Indicados de calidad-->
+  <section class="indicadores">
+    <h2>Indicadores de Calidad</h2>
+    <p>
+      Se considera especialmente importante considerar unos indicadores de
+      calidad que establezcan unos mínimos de éxito del proyecto.
+      Seguidamente, la tabla muestra los indicadores de calidad agrupados
+      en sectores:
+    </p>
+    <table class="tabla-indicadores">
+      <tr>
+        <th>Participación</th>
+        <td>
+          <ul>
+            <li>Tasa de finalización superior al 85%</li>
+            <li>
+              Mínimo de 3 interacciones por semana en foros y retos
+              colaborativos.
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Aprendizaje</th>
+        <td>
+          <ul>
+            <li>
+              Resultados positivos en evaluaciones prácticas mediante
+              rúbricas.
+            </li>
+            <li>
+              Encuestas NPS de satisfacción general sobre las metodologías
+              aplicadas.
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Impacto</th>
+        <td>
+          <ul>
+            <li>
+              Número de proyectos implementados por las startups participantes
+              post formación.
+            </li>
+            <li>
+              Reducción de tiempo y coste en procesos donde intervienen las
+              tecnologías aplicadas en la formación.
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Indicadores técnicos</th>
+        <td>
+          <ul>
+            <li>
+              Tiempo de respuesta de la plataforma inferior a 3 segundos.
+            </li>
+            <li>
+              Tiempo de resolución de incidencias inferior a 24 h (hábiles).
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
+  </div>
 
 
-<div id="recursos">
-  <h1 class="titulo">RECURSOS</h1>
+  <div id="recursos">
+    <h1 class="titulo">RECURSOS</h1>
     <!---Pg.8 F.5. Cronograma de las fases y tareas-->
 
     <section class="presupuesto" id="info">
       <h2>Cronograma de las fases y tareas.</h2>
       <p>
         Las tareas anteriormente descritas se organizan mediante un cronograma
-        elaborado en una página de diseño específico de cronogramas: Tom’s
-        Planner. La Figura 2 muestra una captura del cronograma y el acceso
+        elaborado en una página de diseño específico de cronogramas: <strong>Tom’s
+        Planner</strong>. La imagen siguiente muestra una captura del cronograma y el acceso
         mediante enlace público al documento completo.
       </p>
-      <img
-        src="../metodologia-innovadora/images/cronograma.jpeg"
-        alt="cronograma"
-      />
+      <div class="cronograma-img">
+        <img src="../metodologia-innovadora/images/cronograma.jpeg" alt="Captura del cronograma de fases y tareas" />
+      </div>
     </section>
     <hr />
     <!--Pg 18 H.5. Ejemplo de Storyboard -->
     <section class="criterios">
       <h2>Ejemplo de StoryBoard</h2>
-      <img src="storyboard.png" alt="" />
+      <div class="storyboard-img">
+        <img src="storyboard.png" alt="" />
+      </div>
     </section>
     <hr />
     <!--Pg 20 J. Bibliografía y webgrafía-->
     <!--J.1. Bibliografía citada-->
     <section class="bibliografia">
-      <h2>Bibliografía citada</h2>
+      <h2>Bibliografía</h2>
       <ul>
         <li>
-          CAST. (2023). <em>Universal Design for Learning Guidelines.</em>.
-          <a
-            href="https://udlguidelines.cast.org/
-"
-            >https://udlguidelines.cast.org/
+          Enlace al PDF del proyecto completo.
+          <a href="https://drive.google.com/file/d/1hO2PsRUrUVzpGBe1IWSWvx8_HFZkMwT0/view?usp=sharing">Haz click aquí
           </a>
         </li>
         <li>
-          Gómez-Zorrilla, J., & Piña, D. S. (2022).
-          <em> Guía práctica de analítica digital: ROI, KPI y métricas.</em>LID
-          Editorial.
-        </li>
-        <li>
-          Guàrdia, L., Sangrà, A., Maina, M., & Barberà, E. (2023)
-          <em>Fundamentos del diseño técnico-pedagógico en e-learning</em>. UOC.
-        </li>
-        <li>
-          Kolb, D. A. (1984).
-          <em
-            >Experiential Learning: Experience as the Source of Learning and
-            Development.</em
-          >. Prentice-Hall.
-        </li>
-        <li>
-          Knowles, M. S. (1980).
-          <em
-            >The Modern Practice of Adult Education: From Pedagogy to
-            Andragogy.</em
-          >
-          Cambridge Adult Education.
-        </li>
-        <li>
-          Siemens, G. (2005). Connectivism: A learning theory for the digital
-          age.
-          <em
-            >International Journal of Instructional Technology and Distance
-            Learning, 2(1).
-          </em>
-          <a
-            href="https://www.itdl.org/Journal/Jan_05/article01.ht
-"
-            >https://www.itdl.org/Journal/Jan_05/article01.ht
+          Cronograma (contraseña eduplay360)
+          <a href="https://plan.tomsplanner.es/public/eduplay360">Haz click aquí
           </a>
         </li>
-      </ul>
-      <hr />
-      <h2>Bibliografía consultada</h2>
-      <ul>
         <li>
-          EUCIM. (2023). <em>7 metodologías eLearning en tendencia.</em>
-          <a
-            href="https://eucim.es/noticias/7-metodologias-elearning-tendencia/
+          Ejemplo práctico del formulario, accesible al final de cada bloque:
+          <a href="https://view.genially.com/682778b7eb81cf82efea5b59/learning-experience-didactic-unit-formulario-de-autoevaluacion-reflexiva">Haz click aquí
+          </a>
+        </li>
+        <li>
+          Ejemplo práctico de rúbrica de evaluación:
+          <a href="https://view.genially.com/682630deedb13a639238b80e/interactive-content-evaluation-rubric">Haz click aquí
+          </a>
+        </li>
 
-"
-            >https://eucim.es/noticias/7-metodologias-elearning-tendencia/
-          </a>
-        </li>
-        <li>
-          Fundae. (s.f.)
-          <em> Orientaciones de costes para empresas</em>
-        </li>
-        <li>
-          GHislandi, P. M. M. (2020)
-          <em>Herramientas para la calidad del e-learning académico.</em>
-          Universitat Oberta de Catalunya.
-        </li>
-        <li>
-          Pepa Agüera. (s.f.).
-          <em>Taxonomía de Bloom: qué es y cómo aplicarla en el aula</em>.
-          Educación 3.0.
-          <a
-            href="https://www.educaciontrespuntocero.com/recursos/taxonomia-de-bloom/
-"
-            >https://www.educaciontrespuntocero.com/recursos/taxonomia-de-bloom/
-          </a>
-        </li>
-        <li>
-          Unión Europea. (2016).
-          <em
-            >Reglamento General de Protección de Datos (UE 2016/679). Diario
-            Oficial de la Unión Europea, L 119,
-          </em>
-          1–88.
-        </li>
-        <li>
-          Vygotsky, L. S. (1978)<em
-            >. Mind in Society: The Development of Higher Psychological
-            Processes. Harvard University Press.
-          </em>
-          Harvard University Press.
-        </li>
       </ul>
     </section>
-</div>
-   <footer class="footer">
-      <div class="derechos">
-        <h3><u>SOBRE NOSOTROS</u></h3>
-        <p>
-          &copy; 2025 EduPlay360°. Página ficticia. <br />
-          Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
-          Ramón y Raquel."
-        </p>
-      </div>
+  </div>
+  <footer class="footer">
+    <div class="derechos">
+      <h3><u>SOBRE NOSOTROS</u></h3>
+      <p>
+        &copy; 2025 EduPlay360°. Página ficticia. <br />
+        Créditos: "Master Educación y TIC (UOC) | Grupo 2: Ainara, Maite,
+        Ramón y Raquel."
+      </p>
+    </div>
 
-      <div class="redes">
-        <h3><u>SÍGUENOS EN X</u></h3>
-        <a href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA" target="_blank">
-          <img src="imagenes/x.webp" alt="Siguenos en las redes sociales de X (EduPlay360°)" />
-        </a>
-      </div>
-    </footer>
+    <div class="redes">
+      <h3><u>SÍGUENOS EN X</u></h3>
+      <a href="https://x.com/eduplay360?s=11&t=7CgEVaYy8C0bDMZSXdDRJA" target="_blank">
+        <img src="/imagenes/x.webp" alt="Siguenos en las redes sociales de X (EduPlay360°)" />
+      </a>
+    </div>
+  </footer>
 
-    <script src="script.js" defer></script>
-    <script src="/nav.js" defer></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </body>
+  <script src="script.js" defer></script>
+  <script src="/nav.js" defer></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
 </html>
