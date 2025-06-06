@@ -400,15 +400,11 @@ footer h3 {
 }
 
 footer .redes img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   vertical-align: middle;
   padding: 2px;
-}
-
-footer .redes img[src*="x.webp"] {
-  transform: translateY(1.2px) scale(1.65);
 }
 
 /* Animaciones */
@@ -568,6 +564,13 @@ footer .redes img[src*="x.webp"] {
   .form-group,
   .formulario-contacto button {
   font-size: 13px;
+}
+ footer .redes img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  padding: 2px;
 }
 
 }

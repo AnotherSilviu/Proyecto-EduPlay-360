@@ -322,6 +322,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 2rem;
+  padding:  0 50px 0 50px;
 }
 
 .cuadrado {
@@ -413,6 +414,28 @@ table tbody td strong {
   color: var(--color-blue);
 }
 
+.tabla-content button {
+  margin-top: 20px;
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: var(--font-main);
+}
+
+.tabla-content button:hover {
+  background-color: var(--color-green-shadows);
+}
+
+.tabla-content button a {
+  text-decoration: none;
+  color: var(--bg-light);
+}
+
 /* Estilo para todo el footer */
 .footer {
   text-align: center;
@@ -445,15 +468,11 @@ footer h3 {
 }
 
 footer .redes img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   vertical-align: middle;
   padding: 2px;
-}
-
-footer .redes img[src*="x.webp"] {
-  transform: translateY(1.2px) scale(1.65);
 }
 /*--------------------------------*/
 
@@ -705,4 +724,12 @@ footer .redes img[src*="x.webp"] {
     padding: 0.6rem 1rem;
     font-size: 13px;
   }
+
+   footer .redes img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  padding: 2px;
+}
 }
