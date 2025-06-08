@@ -355,7 +355,7 @@ body {
 }
 
 .info {
-  padding: 40px;
+   padding: 40px;
   background-color: var(--bg-light);
 }
 
@@ -749,16 +749,25 @@ footer .redes img {
   }
 
   .hero-content button,
-  .info button {
+  .info button,
+  .banner button {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
   }
 
   /* ================= CONTENT SECTIONS ================= */
   .actividades,
-  .info,
-  .faqs {
+  .faqs,
+  .banner {
     padding: 30px;
+  }
+  .info {
+    padding: 30px 15px; 
+    text-align: center;
+  }
+  .info-container{
+    margin: 0;
+    padding: 0 30px 0 30px;
   }
   .actividades h2,
   .info-text h2,

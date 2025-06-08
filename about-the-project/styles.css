@@ -295,15 +295,18 @@ body {
 }
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 800px;
-  margin: 2rem auto;
+   position: relative;
+    
+    height: 0;
+    overflow: hidden;
+    width: 560px;
+    height: 315px;
+    margin: 0 auto;
+    margin: 0 auto;
+    background: #000;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 70, 170, 0.15);
-  background-color: #fff;
+
   border: 2px solid var(--color-blue-shadows);
 }
 
@@ -612,5 +615,9 @@ footer .redes img {
   object-fit: contain;
   vertical-align: middle;
   padding: 2px;
+}
+.video-container {
+  width: 320px;     /* Ajusta el ancho aquí */
+    height: 180px; 
 }
 }
